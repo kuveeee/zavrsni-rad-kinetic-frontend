@@ -26,7 +26,7 @@ function NovaRezervacija() {
                 <option value="0">Žena</option>
               </select>
               <p>Broj telefona</p>
-              <input type="number"></input>
+              <input type="text"></input>
               <p>Datum rođenja</p>
               <input type="date"></input>
               <p>E-pošta</p>

@@ -1,0 +1,145 @@
+.h1_usluge h1 {
+    color: #43425D;
+    text-shadow: 0px 3px 6px #00000029;
+    padding-right: 300px;
+    font-weight: bold;
+}
+
+.body {
+    background: #FBFBFD 0% 0% no-repeat padding-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 45px;
+}
+
+.nova_usluga {
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 5px 15px #0000001A;
+    border-radius: 27px;
+    width: 120px;
+    height: 40px;
+    align-self: center;
+    display: table;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.nova_usluga img {
+    width: 22px;
+    height: 22px;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.nova_usluga h3 {
+    color: #43425D;
+    font-size: 10px;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.flex_row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.flex_column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+}
+.usluge_tablica {
+    width: 550px;
+    display: table;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.usluge_tablica li {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 25px;
+    opacity: 0.5;
+}
+
+.rectangle {
+    background-color: white;
+    width: 525px;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.rectangle p {
+    font-size: 15px;
+    color: #43425D;
+    opacity: 0.75;
+}
+
+.usluga {
+    width: 200px;
+    height: 40px;
+    background: #4CC3BE 0% 0% no-repeat padding-box;
+    border-radius: 12px;
+    color: white;
+    font-size: 12px;
+    display: table;
+    margin-right: 40px;
+    margin-top: 5px;
+    padding-left: 12px;
+}
+
+.usluga p{
+    display: table-cell;
+    vertical-align: middle;
+    color: white;
+    opacity: 1;
+}
+
+.trajanje {
+    width: 120px;
+    height: 39px;
+    background: #4CC3BE 0% 0% no-repeat padding-box;
+    border-radius: 12px;
+    color: white;
+    font-size: 12px;
+    display: table;
+    margin-right: 40px;
+    margin-top: 5px;
+    padding-left: 12px;
+    
+}
+.trajanje p{
+    display: table-cell;
+    vertical-align: middle;
+    color: white;
+    opacity: 1;
+}
+
+.cijena {
+    width: 120px;
+    height: 39px;
+    background: #4CC3BE 0% 0% no-repeat padding-box;
+    border-radius: 12px;
+    color: white;
+    font-size: 12px;
+    display: table;
+    margin-top: 5px;
+    padding-left: 12px;
+}
+
+.cijena p{
+    display: table-cell;
+    vertical-align: middle;
+    color: white;
+    opacity: 1;
+}

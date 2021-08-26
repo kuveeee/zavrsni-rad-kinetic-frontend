@@ -79,6 +79,16 @@ h2 {
     color: #43425D;
 }
 
+.input2 select {
+    width: 200px;
+    height: 35px;
+    background: #E6EAED;
+    border-radius: 12px;
+    font-size: 20px;
+    border: none;
+    margin-bottom: 22px;
+}
+
 .input {
     padding-left: 40px;
 }
@@ -95,11 +105,9 @@ h2 {
     height: 60px;
 }
 
-button {
-    
-}
+button {}
 
-.odabir_usluga{
+.odabir_usluga {
     align-content: space-between;
     margin-left: 100px;
 }

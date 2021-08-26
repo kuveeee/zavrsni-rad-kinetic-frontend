@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import '../assets/styles/Dashboard.css';
 
 function Dashboard() {
@@ -8,7 +8,9 @@ function Dashboard() {
       {/* <Sidebar /> */}
       <div class="flex_column">
         <div class="dashboard_body">
-          <h1>Nadzorna ploča</h1>
+          <div class="dashboard_h1">
+            <h1>Nadzorna ploča</h1>
+          </div>
           <div class="break"></div>
           <Link exact to="/Kalendar">
             <div class="kalendar" >
