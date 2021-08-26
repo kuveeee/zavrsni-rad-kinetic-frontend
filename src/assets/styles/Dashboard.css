@@ -1,0 +1,217 @@
+.dashboard_body {
+    background: #fbfbfd;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flex_row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.flex_column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+}
+
+.break {
+    flex-basis: 100%;
+    height: 0;
+}
+
+h1 {
+    font-size: 45px;
+    text-align: left;
+    font-weight: bold;
+    color: #43425D;
+    text-shadow: 0px 3px 6px #0000001A;
+}
+
+p {
+    margin-left: 10px;
+}
+
+.kalendar {
+    width: 448px;
+    height: 148px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 5px 15px #0000001A;
+    border-radius: 12px;
+    opacity: 1;
+    font-family: "Source Sans Pro";
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 30px;
+    text-align: left;
+    color: #43425d;
+    margin-right: 70px;
+    margin-bottom: 70px;
+    padding-top: 3px;
+    padding-left: 20px;
+}
+
+.kalendar:hover{
+    background-color: #DAF1F1;
+}
+
+.nova_rezervacija {
+    width: 224px;
+    height: 148px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 5px 15px #0000001A;
+    border-radius: 12px;
+    opacity: 1;
+    font-family: "Source Sans Pro";
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 30px;
+    text-align: left;
+    color: #43425d;
+    padding-top: 3px;
+    padding-left: 20px;
+}
+
+.nova_rezervacija:hover{
+    background-color: #DAF1F1;
+}
+
+.nova_rezervacija_slika {
+    width: 60px;
+    height: 60px;
+    background: transparent;
+}
+
+.klijenti {
+    width: 448px;
+    height: 148px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 5px 15px #0000001A;
+    border-radius: 12px;
+    opacity: 1;
+    font-family: "Source Sans Pro";
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 30px;
+    text-align: left;
+    color: #43425d;
+    margin-right: 70px;
+    margin-bottom: 70px;
+    padding-top: 3px;
+    padding-left: 20px;
+}
+
+.klijenti:hover{
+    background-color: #DAF1F1;
+}
+
+.financije {
+    width: 448px;
+    height: 148px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 5px 15px #0000001A;
+    border-radius: 12px;
+    opacity: 1;
+    font-family: "Source Sans Pro";
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 30px;
+    text-align: left;
+    color: #43425d;
+    padding-top: 3px;
+    padding-left: 20px;
+}
+
+.financije:hover{
+    background-color: #DAF1F1;
+}
+
+.usluge {
+    width: 334px;
+    height: 341px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 5px 15px #0000001A;
+    border-radius: 12px;
+    opacity: 1;
+    font-family: "Source Sans Pro";
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 30px;
+    text-align: left;
+    color: #43425d;
+    padding-top: 3px;
+    padding-left: 20px;
+    margin-right: 184px;
+}
+
+.usluge:hover{
+    background-color: #DAF1F1;
+}
+
+.naplacivanje {
+    width: 224px;
+    height: 148px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 5px 15px #0000001A;
+    border-radius: 12px;
+    opacity: 1;
+    font-family: "Source Sans Pro";
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 30px;
+    text-align: left;
+    color: #43425d;
+    padding-top: 3px;
+    padding-left: 20px;
+}
+
+.naplacivanje:hover{
+    background-color: #DAF1F1;
+}
+
+.tablica {
+    width: 286px;
+    height: 45px;
+    background: #F4F5F9 0% 0% no-repeat padding-box;
+    opacity: 1;
+}
+
+.tablica h3 {
+    font-size: 10px;
+}
+
+.tablica img {
+    top: 722px;
+    left: 431px;
+    width: 25px;
+    height: 25px;
+    opacity: 1;
+}
+
+.trajanje_usluge {}
+
+.cijena_suluge {}
+
+.termini {
+    top: 249px;
+    left: 1529px;
+    width: 384px;
+    height: 590px;
+    opacity: 1;
+    position: fixed;
+}
+
+.termin {
+    top: 249px;
+    left: 1529px;
+    width: 384px;
+    height: 84px;
+    background: #F4F5F9 0% 0% no-repeat padding-box;
+    border-radius: 12px;
+    opacity: 1;
+    margin-bottom: 15px;
+    padding-top: 1px;
+}

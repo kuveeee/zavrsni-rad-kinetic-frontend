@@ -1,0 +1,90 @@
+.flex_row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    padding-bottom: 500px;
+}
+
+.flex_column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+}
+
+.h1 {
+    font-size: 45px;
+    text-align: left;
+    font-weight: bold;
+    color: #43425D;
+    text-shadow: 0px 3px 6px #0000001A;
+    padding-right: 800px;
+}
+
+.novi_klijent {
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 5px 15px #0000001A;
+    border-radius: 27px;
+    width: 150px;
+    height: 60px;
+    align-self: center;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.novi_klijent img {
+    width: 25px;
+    height: 25px;
+    align-self: center;
+}
+
+.novi_klijent h3 {
+    font: normal normal bold 18px/30px Source Sans Pro;
+    letter-spacing: 0px;
+    color: #43425D;
+    font-size: 22px;
+    align-self: center;
+}
+
+.klijenti_tablica {
+    width: 1200px;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    display: table;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.klijenti_tablica li {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 25px;
+    opacity: 0.5;
+}
+
+.klijent_box {
+    width: 1200px;
+    height: 65px;
+    display: flex;
+    justify-content: space-between;
+    display: table;
+    background: white 0% 0% no-repeat padding-box;
+    margin-bottom: 15px;
+    padding-right: 20px;
+}
+
+.klijent_box li {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 20px;
+}
+
+.klijent_box:hover {
+    background-color: #4CC3BE30;
+}

@@ -1,0 +1,124 @@
+body {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100vh;
+}
+
+.flex_row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    padding-bottom: 0px;
+}
+
+.flex_column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+}
+
+.break {
+    flex-basis: 100%;
+    height: 0;
+}
+
+.body {
+    background: #FBFBFD 0% 0% no-repeat padding-box;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+h1 {
+    text-align: left;
+    font: normal normal normal 45px/94px Source Sans Pro;
+    letter-spacing: 0px;
+    color: #43425D;
+    text-shadow: 0px 3px 6px #00000029;
+}
+
+h2 {
+    text-align: left;
+    font: normal normal normal 45px/94px Source Sans Pro;
+    letter-spacing: 0px;
+    color: #43425D;
+    text-shadow: 0px 3px 6px #00000029;
+}
+
+.klijent {
+    width: 400px;
+    height: 600px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 5px 15px #00000029;
+    border-radius: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px 20px 10px 20px;
+}
+
+.klijent img {
+    width: 85px;
+    height: 134px;
+}
+
+.klijent input {
+    width: 200px;
+    height: 35px;
+    background: #E6EAED;
+    border-radius: 12px;
+    font-size: 20px;
+    border: none;
+    margin-bottom: 22px;
+}
+
+.klijent p {
+    text-align: left;
+    font: normal normal bold 18px/21px Source Sans Pro;
+    letter-spacing: 0px;
+    color: #43425D;
+}
+
+.input {
+    padding-left: 40px;
+}
+
+.input2 {
+    padding-left: 20px;
+}
+
+.usluga_box {
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 12px;
+    width: 400px;
+    height: 60px;
+}
+
+button {
+    
+}
+
+.odabir_usluga{
+    align-content: space-between;
+    margin-left: 100px;
+}
+
+.odabir_usluga h2 {
+    font-size: 30px;
+}
+
+.odabir_usluga select {
+    width: 200px;
+    height: 50px;
+}
+
+.odabir_usluga button {
+    width: 120px;
+    height: 35px;
+    background: #4CC3BE 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 12px;
+    margin-top: 150px;
+    border: none;
+}
