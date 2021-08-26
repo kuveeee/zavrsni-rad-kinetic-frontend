@@ -25,4 +25,10 @@ export const sidebarData = [
     icon: <Icons.AddToQueue />,
     cName: 'nav-text',
   },
+  {
+    title: 'Naplaćivanje',
+    path: '/naplacivanje',
+    icon: <Icons.AttachMoney />,
+    cName: 'nav-text',
+  },
 ];

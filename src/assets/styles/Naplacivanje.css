@@ -1,0 +1,13 @@
+.naplacivanje_body {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+}
+
+.naplacivanje_body h1{
+    font-size: 45px;
+    text-align: left;
+    font-weight: bold;
+    color: #43425D;
+    text-shadow: 0px 3px 6px #0000001A;
+}
