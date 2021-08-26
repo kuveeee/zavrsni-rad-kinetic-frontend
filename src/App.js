@@ -6,6 +6,7 @@ import Klijenti from './views/Klijenti';
 import Usluge from './views/Usluge';
 import NovaRezervacija from './views/NovaRezervacija';
 import Naplacivanje from './views/Naplacivanje';
+import Profil from './views/Profil';
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
           <Route path="/usluge" component={Usluge} />
           <Route path="/nova-rezervacija" component={NovaRezervacija} />
           <Route path="/naplacivanje" component={Naplacivanje} />
+          <Route path="/profil" component={Profil} />
         </Switch>
       </Router>
     </div>

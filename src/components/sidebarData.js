@@ -31,4 +31,10 @@ export const sidebarData = [
     icon: <Icons.AttachMoney />,
     cName: 'nav-text',
   },
+  {
+    title: 'Profil',
+    path: '/profil',
+    icon: <Icons.Person />,
+    cName: 'nav-text',
+  },
 ];
