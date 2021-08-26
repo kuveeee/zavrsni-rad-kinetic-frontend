@@ -4,7 +4,6 @@ import plus from '../assets/images/usluge/plus.png';
 
 function Klijenti() {
   return <div className="main">
-    <div class="flex_row">
       <div class="klijenti_body">
         <div class="flex_row">
           <h1 class="h1">Klijenti</h1>
@@ -22,77 +21,77 @@ function Klijenti() {
             <li>SPOL</li>
           </div>
           <div class="klijent_box">
-            <li>Saaed Kay</li>
+            <li><strong>Saaed Kay</strong></li>
             <li>+1-252-7284</li>
             <li>saaedkay@gmail.com</li>
             <li>21.10.1999</li>
             <li>M</li>
           </div>
           <div class="klijent_box">
-            <li>Saaed Kay</li>
+          <li><strong>Saaed Kay</strong></li>
             <li>+1-252-7284</li>
             <li>saaedkay@gmail.com</li>
             <li>21.10.1999</li>
             <li>M</li>
           </div>
           <div class="klijent_box">
-            <li>Saaed Kay</li>
+          <li><strong>Saaed Kay</strong></li>
             <li>+1-252-7284</li>
             <li>saaedkay@gmail.com</li>
             <li>21.10.1999</li>
             <li>M</li>
           </div>
           <div class="klijent_box">
-            <li>Saaed Kay</li>
+          <li><strong>Saaed Kay</strong></li>
             <li>+1-252-7284</li>
             <li>saaedkay@gmail.com</li>
             <li>21.10.1999</li>
             <li>M</li>
           </div>
           <div class="klijent_box">
-            <li>Saaed Kay</li>
+          <li><strong>Saaed Kay</strong></li>
             <li>+1-252-7284</li>
             <li>saaedkay@gmail.com</li>
             <li>21.10.1999</li>
             <li>M</li>
           </div>
           <div class="klijent_box">
-            <li>Saaed Kay</li>
+            <li><strong>Saaed Kay</strong></li>
             <li>+1-252-7284</li>
             <li>saaedkay@gmail.com</li>
             <li>21.10.1999</li>
             <li>M</li>
           </div>
           <div class="klijent_box">
-            <li>Saaed Kay</li>
+            <li><strong>Saaed Kay</strong></li>
             <li>+1-252-7284</li>
             <li>saaedkay@gmail.com</li>
             <li>21.10.1999</li>
             <li>M</li>
           </div>
           <div class="klijent_box">
-            <li>Saaed Kay</li>
+            <li><strong>Saaed Kay</strong></li>
             <li>+1-252-7284</li>
             <li>saaedkay@gmail.com</li>
             <li>21.10.1999</li>
             <li>M</li>
           </div>
           <div class="klijent_box">
-            <li>Saaed Kay</li>
+            <li><strong>Saaed Kay</strong></li>
             <li>+1-252-7284</li>
             <li>saaedkay@gmail.com</li>
             <li>21.10.1999</li>
             <li>M</li>
           </div>
           <div class="klijent_box">
-            <li>Saaed Kay</li>
+            <li><strong>Saaed Kay</strong></li>
             <li>+1-252-7284</li>
             <li>saaedkay@gmail.com</li>
             <li>21.10.1999</li>
             <li>M</li>
           </div>
           <div class="klijent_box">
-            <li>Saaed Kay</li>
+            <li><strong>Saaed Kay</strong></li>
             <li>+1-252-7284</li>
             <li>saaedkay@gmail.com</li>
             <li>21.10.1999</li>
@@ -100,7 +99,6 @@ function Klijenti() {
           </div>
         </div>
       </div>
-    </div>
   </div>;
 }
 

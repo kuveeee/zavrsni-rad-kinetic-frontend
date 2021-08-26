@@ -1,3 +1,9 @@
+.klijenti_body{
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+}
+
 .flex_row {
     display: flex;
     flex-direction: row;

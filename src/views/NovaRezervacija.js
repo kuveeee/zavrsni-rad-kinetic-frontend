@@ -9,7 +9,6 @@ function NovaRezervacija() {
         <div class="body">
           <h1>Nova rezervacija</h1>
           <div class="break"></div>
-
           <div class="klijent">
             <img class="woman" src={woman} alt="woman"></img>
             <div class="input">
