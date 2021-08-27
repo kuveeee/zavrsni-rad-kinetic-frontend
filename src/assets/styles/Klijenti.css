@@ -91,4 +91,6 @@
 
 .klijent_box:hover {
     background-color: #4CC3BE30;
+    transition: transform 0.3s;
+    transform: scale(1.05);
 }

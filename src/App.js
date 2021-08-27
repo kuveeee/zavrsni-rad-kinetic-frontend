@@ -7,6 +7,7 @@ import Usluge from './views/Usluge';
 import NovaRezervacija from './views/NovaRezervacija';
 import Naplacivanje from './views/Naplacivanje';
 import Profil from './views/Profil';
+import Kalendar from './views/Kalendar';
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
         <Sidebar />
         <Switch>
           <Route path="/" exact component={Dashboard} />
+          <Route path="/kalendar" component={Kalendar} />
           <Route path="/klijenti" component={Klijenti} />
           <Route path="/usluge" component={Usluge} />
           <Route path="/nova-rezervacija" component={NovaRezervacija} />

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import * as Icons from '@material-ui/icons';
 import '../assets/styles/Dashboard.css';
 
 function Dashboard() {
@@ -21,6 +22,7 @@ function Dashboard() {
             <Link exact to="/Nova-Rezervacija">
               <div class="nova_rezervacija" >
                 <p>Nova rezervacija</p>
+                <Icons.Add />
               </div>
             </Link>
             <div class="termini">
@@ -30,6 +32,7 @@ function Dashboard() {
             <Link exact to="/Klijenti">
               <div class="klijenti" >
                 <p>Klijenti</p>
+                <Icons.Group />
                 <div class="break"></div>
                 <p>250</p>
               </div>
