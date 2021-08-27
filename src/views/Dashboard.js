@@ -7,7 +7,6 @@ function Dashboard() {
   return <div className="main">
     <div class="dashboard_body">
       <div class="flex_row">
-        {/* <Sidebar /> */}
         <div class="flex_column">
           <div class="dashboard_body">
             <div class="dashboard_h1">
