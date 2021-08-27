@@ -11,7 +11,7 @@ function NovaRezervacija() {
           <div class="break"></div>
           <div class="klijent">
             <img class="woman" src={woman} alt="woman"></img>
-            <div class="input">
+            <div class="input1">
               <p>Ime</p>
               <input type="text"></input>
               <p>Prezime</p>

@@ -2,7 +2,7 @@ import * as Icons from '@material-ui/icons';
 
 export const sidebarData = [
   {
-    title: 'Dashboard',
+    title: 'Nadzorna ploča',
     path: '/',
     icon: <Icons.Dashboard />,
     cName: 'nav-text',
@@ -16,7 +16,7 @@ export const sidebarData = [
   {
     title: 'Usluge',
     path: '/usluge',
-    icon: <Icons.FitnessCenter />,
+    icon: <Icons.Healing />,
     cName: 'nav-text',
   },
   {

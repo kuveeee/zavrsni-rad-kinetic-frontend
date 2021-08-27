@@ -9,7 +9,6 @@
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
-    padding-bottom: 500px;
 }
 
 .flex_column {
@@ -37,6 +36,10 @@
     border: none;
     margin-top: 10px;
     margin-bottom: 50px;
+}
+
+.naplacivanje_body select:hover{
+    background-color: #50C3BF;
 }
 
 .naplacivanje_body input {
