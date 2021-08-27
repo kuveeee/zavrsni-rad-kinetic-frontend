@@ -32,7 +32,7 @@
     font-weight: bold;
 }
 
-p {
+.dashboard_body p {
     margin-left: 10px;
 }
 
@@ -57,6 +57,8 @@ p {
 
 .kalendar:hover{
     background-color: #DAF1F1;
+    transition: transform 0.3s;
+    transform: scale(1.1);
 }
 
 .nova_rezervacija {
@@ -78,6 +80,8 @@ p {
 
 .nova_rezervacija:hover{
     background-color: #DAF1F1;
+    transition: transform 0.3s;
+    transform: scale(1.1);
 }
 
 .nova_rezervacija_slika {
@@ -107,6 +111,8 @@ p {
 
 .klijenti:hover{
     background-color: #DAF1F1;
+    transition: transform 0.3s;
+    transform: scale(1.1);
 }
 
 .financije {
@@ -128,6 +134,8 @@ p {
 
 .financije:hover{
     background-color: #DAF1F1;
+    transition: transform 0.3s;
+    transform: scale(1.1);
 }
 
 .usluge {
@@ -150,6 +158,8 @@ p {
 
 .usluge:hover{
     background-color: #DAF1F1;
+    transition: transform 0.3s;
+    transform: scale(1.1);
 }
 
 .naplacivanje {
@@ -171,6 +181,8 @@ p {
 
 .naplacivanje:hover{
     background-color: #DAF1F1;
+    transition: transform 0.3s;
+    transform: scale(1.1);
 }
 
 .tablica {
