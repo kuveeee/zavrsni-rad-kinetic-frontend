@@ -1,8 +1,11 @@
 import React from 'react';
-import '../assets/styles/NovaRezervacija.css'
-import woman from '../assets/images/woman.png';
+import '../assets/styles/NovaRezervacija.css'; //asset
+import woman from '../assets/images/woman.png'; //asset
+import DateTimePicker from 'react-datetime-picker';
+import { useState } from 'react';
 
 function NovaRezervacija() {
+  const [value, onChange] = useState(new Date());
   return <div className="main">
     <div class="flex_row">
       <div class="flex_column">
@@ -44,7 +47,27 @@ function NovaRezervacija() {
                 <option value="0">Usluga 5</option>
               </select>
               <div class="break"></div>
-              <button>Kreiraj</button>
+            </div>
+            <div class="odabir_termina">
+              <h2>Odabir termina</h2>
+              <DateTimePicker
+                amPmAriaLabel="Select AM/PM"
+                calendarAriaLabel="Toggle calendar"
+                clearAriaLabel="Clear value"
+                dayAriaLabel="Day"
+                hourAriaLabel="Hour"
+                maxDetail="second"
+                minuteAriaLabel="Minute"
+                monthAriaLabel="Month"
+                nativeInputAriaLabel="Date and time"
+                onChange={onChange}
+                secondAriaLabel="Second"
+                value={value}
+                yearAriaLabel="Year"
+              />
+            </div>
+            <div class="kreiraj">
+              <button class="button_kreiraj">Kreiraj</button>
             </div>
           </div>
         </div>
@@ -52,5 +75,4 @@ function NovaRezervacija() {
     </div>
   </div>;
 }
-
 export default NovaRezervacija;

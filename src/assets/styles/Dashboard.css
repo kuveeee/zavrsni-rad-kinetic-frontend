@@ -55,7 +55,7 @@
     padding-left: 20px;
 }
 
-.kalendar:hover{
+.kalendar:hover {
     background-color: #DAF1F1;
     transition: transform 0.3s;
     transform: scale(1.1);
@@ -78,7 +78,7 @@
     padding-left: 20px;
 }
 
-.nova_rezervacija:hover{
+.nova_rezervacija:hover {
     background-color: #DAF1F1;
     transition: transform 0.3s;
     transform: scale(1.1);
@@ -109,7 +109,7 @@
     padding-left: 20px;
 }
 
-.klijenti:hover{
+.klijenti:hover {
     background-color: #DAF1F1;
     transition: transform 0.3s;
     transform: scale(1.1);
@@ -132,7 +132,7 @@
     padding-left: 20px;
 }
 
-.financije:hover{
+.financije:hover {
     background-color: #DAF1F1;
     transition: transform 0.3s;
     transform: scale(1.1);
@@ -156,7 +156,7 @@
     margin-right: 184px;
 }
 
-.usluge:hover{
+.usluge:hover {
     background-color: #DAF1F1;
     transition: transform 0.3s;
     transform: scale(1.1);
@@ -179,7 +179,7 @@
     padding-left: 20px;
 }
 
-.naplacivanje:hover{
+.naplacivanje:hover {
     background-color: #DAF1F1;
     transition: transform 0.3s;
     transform: scale(1.1);
@@ -227,4 +227,11 @@
     opacity: 1;
     margin-bottom: 15px;
     padding-top: 1px;
+}
+
+.dashboard_body .MuiPaper-root {
+    width: 300px;
+    position: fixed;
+    right: 100px;
+    top: 250px;
 }

@@ -8,6 +8,12 @@ export const sidebarData = [
     cName: 'nav-text',
   },
   {
+    title: 'Kalendar',
+    path: '/kalendar',
+    icon: <Icons.CalendarToday />,
+    cName: 'nav-text',
+  },
+  {
     title: 'Klijenti',
     path: '/klijenti',
     icon: <Icons.People />,
