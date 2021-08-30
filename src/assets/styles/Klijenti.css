@@ -1,4 +1,4 @@
-.klijenti_body{
+.klijenti_body {
     display: flex;
     flex-wrap: wrap;
     height: 100%;
@@ -32,11 +32,11 @@
     background: #FFFFFF 0% 0% no-repeat padding-box;
     box-shadow: 0px 5px 15px #0000001A;
     border-radius: 27px;
-    width: 150px;
+    width: 200px;
     height: 60px;
     align-self: center;
-    display: flex;
-    justify-content: space-between;
+    display: table;
+    position: relative;
     padding-left: 20px;
     padding-right: 20px;
 }
@@ -44,7 +44,10 @@
 .novi_klijent img {
     width: 25px;
     height: 25px;
-    align-self: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
 }
 
 .novi_klijent h3 {
@@ -52,7 +55,17 @@
     letter-spacing: 0px;
     color: #43425D;
     font-size: 22px;
-    align-self: center;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    padding-left: 20px;
+}
+
+.novi_klijent:hover {
+    background-color: #4CC3BE30;
+    transition: transform 0.3s;
+    transform: scale(1.1);
+    box-shadow: 0px 5px 15px #dbdbdb1a;
 }
 
 .klijenti_tablica {

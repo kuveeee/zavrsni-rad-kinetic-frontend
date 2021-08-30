@@ -106,8 +106,6 @@ h2 {
     height: 60px;
 }
 
-button {}
-
 .odabir_usluga {
     align-content: space-between;
     margin-left: 100px;
@@ -120,6 +118,7 @@ button {}
 .odabir_usluga select {
     width: 200px;
     height: 50px;
+    border-radius: 5px;
 }
 
 .odabir_termina {
@@ -129,15 +128,18 @@ button {}
 
 .odabir_termina h2 {
     font-size: 30px;
+    margin-bottom: 18px;
 }
 
-.odabir_termina input {
+/* .odabir_termina input {
     font-size: 25px;
 }
 
 .react-datetime-picker__inputGroup__divider {
     margin-left: 5px;
-}
+    font-size: 25px;
+    text-align: center;
+} */
 
 .kreiraj {
     margin-left: 100px;

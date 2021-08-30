@@ -50,29 +50,36 @@ function NovaRezervacija() {
             </div>
             <div class="odabir_termina">
               <h2>Odabir termina</h2>
-              <DateTimePicker
-                amPmAriaLabel="Select AM/PM"
-                calendarAriaLabel="Toggle calendar"
-                clearAriaLabel="Clear value"
-                dayAriaLabel="Day"
-                hourAriaLabel="Hour"
-                maxDetail="second"
-                minuteAriaLabel="Minute"
-                monthAriaLabel="Month"
-                nativeInputAriaLabel="Date and time"
-                onChange={onChange}
-                secondAriaLabel="Second"
-                value={value}
-                yearAriaLabel="Year"
-              />
+              <div className="Sample">
+                <div className="Sample__container">
+                  <main className="Sample__container__content">
+                    <DateTimePicker
+                      amPmAriaLabel="Select AM/PM"
+                      calendarAriaLabel="Toggle calendar"
+                      clearAriaLabel="Clear value"
+                      dayAriaLabel="Day"
+                      hourAriaLabel="Hour"
+                      minuteAriaLabel="Minute"
+                      monthAriaLabel="Month"
+                      nativeInputAriaLabel="Date and time"
+                      onChange={onChange}
+                      secondAriaLabel="Second"
+                      value={value}
+                      yearAriaLabel="Year"
+                      maxDetail="minute" //ograničavanje na sate i minute, sekunde nam ne trebaju
+                    />
+                  </main>
+                </div>
+              </div>
             </div>
             <div class="kreiraj">
               <button class="button_kreiraj">Kreiraj</button>
             </div>
+
           </div>
         </div>
       </div>
     </div>
-  </div>;
+  </div >;
 }
 export default NovaRezervacija;

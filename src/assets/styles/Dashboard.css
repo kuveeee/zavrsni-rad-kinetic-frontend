@@ -204,10 +204,6 @@
     opacity: 1;
 }
 
-.trajanje_usluge {}
-
-.cijena_suluge {}
-
 .termini {
     top: 249px;
     left: 1529px;
@@ -231,7 +227,9 @@
 
 .dashboard_body .MuiPaper-root {
     width: 300px;
+    height: 70%;
     position: fixed;
     right: 100px;
     top: 250px;
+    background-color: transparent;
 }
