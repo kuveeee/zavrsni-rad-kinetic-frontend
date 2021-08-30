@@ -17,7 +17,7 @@ function Klijenti() {
         <div class="client_search">
           <div class="search">
             <Icons.Search />
-            <input placeholdertext="place"></input>
+            <input placeholder="Pretraga klijenata"></input>
           </div>
         </div>
       </div>

@@ -67,7 +67,7 @@ function Dashboard() {
                 </div>
               </div>
             </Link>
-            <Link style={{textDecoration: "none"}} exact to="/Naplaćivanje">
+            <Link style={{textDecoration: "none"}} exact to="/naplacivanje">
               <div class="naplacivanje" >
                 <p>Naplaćivanje</p>
               </div>
