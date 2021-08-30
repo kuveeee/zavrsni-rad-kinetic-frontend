@@ -38,8 +38,10 @@
     margin-bottom: 50px;
 }
 
-.naplacivanje_body select:hover{
+.naplacivanje_body select:hover {
     background-color: #50C3BF;
+    transition: transform 0.3s;
+    transform: scale(1.1);
 }
 
 .naplacivanje_body input {
@@ -51,4 +53,9 @@
     border: none;
     margin-top: 10px;
     margin-bottom: 22px;
+}
+
+.naplacivanje_body input:hover {
+    transition: transform 0.3s;
+    transform: scale(1.1);
 }
