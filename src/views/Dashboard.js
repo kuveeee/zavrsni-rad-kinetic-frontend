@@ -28,12 +28,12 @@ function Dashboard() {
               <h1>Nadzorna ploča</h1>
             </div>
             <div class="break"></div>
-            <Link exact to="/Kalendar">
+            <Link style={{textDecoration: "none"}} exact to="/Kalendar">
               <div class="kalendar" >
                 <p>Kalendar</p>
               </div>
             </Link>
-            <Link exact to="/Nova-Rezervacija">
+            <Link style={{textDecoration: "none"}} exact to="/Nova-Rezervacija">
               <div class="nova_rezervacija" >
                 <p>Nova rezervacija</p>
                 <Icons.Add />
@@ -43,7 +43,7 @@ function Dashboard() {
               <p></p>
             </div>
             <div class="break"></div>
-            <Link exact to="/Klijenti">
+            <Link style={{textDecoration: "none"}} exact to="/Klijenti">
               <div class="klijenti" >
                 <p>Klijenti</p>
                 <Icons.Group />
@@ -55,7 +55,7 @@ function Dashboard() {
               <p>Financije</p>
             </div>
             <div class="break"></div>
-            <Link exact to="/Usluge">
+            <Link style={{textDecoration: "none"}} exact to="/Usluge">
               <div class="usluge" >
                 <p>Usluge</p>
                 <div class="tablica">
@@ -67,7 +67,7 @@ function Dashboard() {
                 </div>
               </div>
             </Link>
-            <Link exact to="/Naplaćivanje">
+            <Link style={{textDecoration: "none"}} exact to="/Naplaćivanje">
               <div class="naplacivanje" >
                 <p>Naplaćivanje</p>
               </div>
