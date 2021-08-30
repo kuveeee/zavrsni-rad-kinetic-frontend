@@ -15,28 +15,33 @@
     background: #FFFFFF 0% 0% no-repeat padding-box;
     box-shadow: 0px 5px 15px #0000001A;
     border-radius: 27px;
-    width: 120px;
-    height: 40px;
+    width: 200px;
+    height: 60px;
     align-self: center;
     display: table;
-    padding-left: 10px;
-    padding-right: 10px;
+    position: relative;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .nova_usluga img {
-    width: 22px;
-    height: 22px;
-    display: table-cell;
-    vertical-align: middle;
-    text-align: center;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
 }
 
 .nova_usluga h3 {
+    font: normal normal bold 18px/30px Source Sans Pro;
+    letter-spacing: 0px;
     color: #43425D;
-    font-size: 10px;
+    font-size: 22px;
     display: table-cell;
     vertical-align: middle;
     text-align: center;
+    padding-left: 20px;
 }
 
 .flex_row {
@@ -52,6 +57,7 @@
     flex-basis: 100%;
     flex: 1;
 }
+
 .usluge_tablica {
     width: 550px;
     display: table;
@@ -97,7 +103,7 @@
     padding-left: 12px;
 }
 
-.usluga p{
+.usluga p {
     display: table-cell;
     vertical-align: middle;
     color: white;
@@ -115,9 +121,9 @@
     margin-right: 40px;
     margin-top: 5px;
     padding-left: 12px;
-    
 }
-.trajanje p{
+
+.trajanje p {
     display: table-cell;
     vertical-align: middle;
     color: white;
@@ -136,7 +142,7 @@
     padding-left: 12px;
 }
 
-.cijena p{
+.cijena p {
     display: table-cell;
     vertical-align: middle;
     color: white;

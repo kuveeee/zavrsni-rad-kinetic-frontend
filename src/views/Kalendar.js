@@ -10,7 +10,7 @@ import {
     Appointments,
 } from '@devexpress/dx-react-scheduler-material-ui';
 
-const currentDate = '2021-08-29';
+const currentDate = '2021-08-30';
 const schedulerData = [
     { startDate: '2021-08-30T09:45', endDate: '2021-08-30T010:45', title: 'Rezervacija 1' },
     { startDate: '2021-08-30T14:00', endDate: '2021-08-30T16:00', title: 'Rezervacija 2' },
