@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import * as Icons from '@material-ui/icons';
 import '../assets/styles/Dashboard.css';
 
-import Paper from '@material-ui/core/Paper';
+import Paper from '@material-ui/core/Paper'; //vizualni dio za kalendar
 import { ViewState } from '@devexpress/dx-react-scheduler';
 import {
   Scheduler,
