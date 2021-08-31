@@ -1,6 +1,6 @@
 import React from 'react';
 import '../assets/styles/Klijenti.css';
-import * as Icons from '@material-ui/icons';
+import ClientSearch from '../components/clientSearch';  //komponenta za pretragu klijenata
 import plus from '../assets/images/usluge/plus.png';
 
 function Klijenti() {
@@ -14,12 +14,7 @@ function Klijenti() {
         </div>
       </div>
       <div class="flex_row">
-        <div class="client_search">
-          <div class="search">
-            <Icons.Search />
-            <input placeholder="Pretraga klijenata"></input>
-          </div>
-        </div>
+        <ClientSearch />
       </div>
       <div class="flex_row">
         <div class="klijenti_tablica">

@@ -1,9 +1,9 @@
 import React from 'react';
-import {toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css'; //Notifications styles
-import '../assets/styles/NovaRezervacija.css'; //asset
-import woman from '../assets/images/woman.png'; //asset
-import DateTimePicker from 'react-datetime-picker'; //Datetime picker
+import {toast } from 'react-toastify'; //               Notifications
+import 'react-toastify/dist/ReactToastify.css';//       Notifications styles
+import '../assets/styles/NovaRezervacija.css'; //       asset
+import woman from '../assets/images/woman.png'; //      asset
+import DateTimePicker from 'react-datetime-picker'; //  Datetime picker
 import { useState } from 'react';
 
 toast.configure()
