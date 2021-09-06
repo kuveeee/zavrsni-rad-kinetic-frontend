@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import * as Icons from '@material-ui/icons';
 import '../assets/styles/Dashboard.css';
+import new_reservation from '../assets/images/new_reservation.png';
+import finantion_chart from '../assets/images/finantion_chart.png';
 
 import Paper from '@material-ui/core/Paper'; //vizualni dio za kalendar
 import { ViewState } from '@devexpress/dx-react-scheduler';
@@ -36,7 +37,7 @@ function Dashboard() {
             <Link style={{textDecoration: "none"}} exact to="/Nova-Rezervacija">
               <div class="nova_rezervacija" >
                 <p>Nova rezervacija</p>
-                <Icons.Add />
+                <img src={new_reservation} alt="Slika za dodavanje nove rezervacije"></img>
               </div>
             </Link>
             <div class="termini">
@@ -46,13 +47,13 @@ function Dashboard() {
             <Link style={{textDecoration: "none"}} exact to="/Klijenti">
               <div class="klijenti" >
                 <p>Klijenti</p>
-                <Icons.Group />
                 <div class="break"></div>
                 <p>250</p>
               </div>
             </Link>
             <div class="financije" >
               <p>Financije</p>
+              <img src={finantion_chart} alt="Graf koji prikazuje prihoda"></img>
             </div>
             <div class="break"></div>
             <Link style={{textDecoration: "none"}} exact to="/Usluge">
