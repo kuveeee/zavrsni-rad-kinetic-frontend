@@ -113,6 +113,10 @@
     padding-left: 20px;
 }
 
+.klijenti p{
+    margin-bottom: 15px;
+}
+
 .klijenti:hover {
     background-color: #DAF1F1;
     transition: transform 0.3s;
@@ -193,15 +197,22 @@
     transform: scale(1.1);
 }
 
-.tablica {
+.dashboard_tablica {
+    margin-top: 20px;
+    border-radius: 12px;
     width: 286px;
     height: 45px;
     background: #F4F5F9 0% 0% no-repeat padding-box;
     opacity: 1;
+    display: table;
 }
 
-.tablica h3 {
-    font-size: 10px;
+.dashboard_body li {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 18px;
+    opacity: 0.5;
 }
 
 .tablica img {

@@ -9,54 +9,21 @@ function Profil() {
             <h1>Profil</h1>
             <div class="break"></div>
             <div class="profil">
-                <p>Roberto Čaćan</p>  
                 <div class="break"></div>            
                 <img class="user" src={user} alt="Korisnik"></img>
                 <div class="break"></div>
                 <div class="input">
                     <p>Ime</p>
-                    <input type="text"></input>
+                    <input type="text" placeholder="Roberto"></input>
                     <div class="break"></div>
                     <p>Prezime</p>
-                    <input type="text"></input>
+                    <input type="text" placeholder="Čaćan"></input>
                     <p>Broj telefona</p>
-                    <input type="text"></input>
+                    <input type="text" placeholder="00000000"></input>
                     <p>Datum rođenja</p>
-                    <p>21.10.1999</p>
+                    <input type="text" placeholder="21.10.1999"></input>
                     <p>E-pošta</p>
-                    <input type="text"></input>
-                </div>
-            </div>
-            <div class="profil">
-                <p>Roberto Čaćan</p>              
-                <img class="user" src={user} alt="Korisnik"></img>
-                <div class="input">
-                    <p>Ime</p>
-                    <input type="text"></input>
-                    <p>Prezime</p>
-                    <input type="text"></input>
-                    <p>Broj telefona</p>
-                    <input type="text"></input>
-                    <p>Datum rođenja</p>
-                    <p>21.10.1999</p>
-                    <p>E-pošta</p>
-                    <input type="text"></input>
-                </div>
-            </div>
-            <div class="profil">
-                <p>Roberto Čaćan</p>              
-                <img class="user" src={user} alt="Korisnik"></img>
-                <div class="input">
-                    <p>Ime</p>
-                    <input type="text"></input>
-                    <p>Prezime</p>
-                    <input type="text"></input>
-                    <p>Broj telefona</p>
-                    <input type="text"></input>
-                    <p>Datum rođenja</p>
-                    <p>21.10.1999</p>
-                    <p>E-pošta</p>
-                    <input type="text"></input>
+                    <input type="text" placeholder="email@mail.com"></input>
                 </div>
             </div>
         </div>

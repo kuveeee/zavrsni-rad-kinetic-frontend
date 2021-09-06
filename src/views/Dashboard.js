@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import '../assets/styles/Dashboard.css';
 import new_reservation from '../assets/images/new_reservation.png';
 import finantion_chart from '../assets/images/finantion_chart.png';
+import clients_chart from '../assets/images/clients_chart.png';
 
 import Paper from '@material-ui/core/Paper'; //vizualni dio za kalendar
 import { ViewState } from '@devexpress/dx-react-scheduler';
@@ -47,8 +48,7 @@ function Dashboard() {
             <Link style={{textDecoration: "none"}} exact to="/Klijenti">
               <div class="klijenti" >
                 <p>Klijenti</p>
-                <div class="break"></div>
-                <p>250</p>
+                <img src={clients_chart} alt="Graf s klijentima"></img>
               </div>
             </Link>
             <div class="financije" >
@@ -59,12 +59,10 @@ function Dashboard() {
             <Link style={{textDecoration: "none"}} exact to="/Usluge">
               <div class="usluge" >
                 <p>Usluge</p>
-                <div class="tablica">
-                  <ul>
-                    <ol>
-                      <h3>Naziv usluge</h3>
-                    </ol>
-                  </ul>
+                <div class="dashboard_tablica">
+                  <li>Naziv usluge</li>
+                  <li>Trajanje</li>
+                  <li>Cijena</li>
                 </div>
               </div>
             </Link>
