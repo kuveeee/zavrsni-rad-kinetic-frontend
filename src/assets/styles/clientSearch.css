@@ -23,6 +23,10 @@
     border: none;
 }
 
+.client_search textarea:focus, input:focus {
+    outline: none;
+}
+
 .client_search:hover {
     background-color: #4CC3BE30;
     transition: transform 0.3s;

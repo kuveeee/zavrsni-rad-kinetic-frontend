@@ -19,9 +19,8 @@
     flex: 1;
 }
 
-.h1 {
+.klijenti_body h1 {
     font-size: 45px;
-    text-align: left;
     font-weight: bold;
     color: #43425D;
     text-shadow: 0px 3px 6px #0000001A;
@@ -51,7 +50,6 @@
 }
 
 .novi_klijent h3 {
-    font: normal normal bold 18px/30px Source Sans Pro;
     letter-spacing: 0px;
     color: #43425D;
     font-size: 22px;
@@ -67,8 +65,6 @@
     transform: scale(1.1);
     box-shadow: 0px 5px 15px #dbdbdb1a;
 }
-
-
 
 .klijenti_tablica {
     width: 1200px;
