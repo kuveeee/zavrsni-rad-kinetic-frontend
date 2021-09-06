@@ -66,11 +66,12 @@ h2 {
     font-size: 20px;
     border: none;
     margin-bottom: 22px;
+    padding-left: 17px;
 }
 
 .klijent p {
     text-align: left;
-    font: normal normal bold 18px/21px Source Sans Pro;
+    font-size: 18px;
     letter-spacing: 0px;
     color: #43425D;
 }
@@ -126,9 +127,10 @@ h2 {
 }
 
 .odabir_usluga select {
+    font-size: 18px;
     background-color: #d4d4d4;
     width: 200px;
-    height: 50px;
+    height: 60px;
     border-radius: 5px;
     border: none;
 }
@@ -151,15 +153,17 @@ h2 {
     margin-bottom: 18px;
 }
 
-/* .odabir_termina input {
-    font-size: 25px;
-}
-
 .react-datetime-picker__inputGroup__divider {
     margin-left: 5px;
     font-size: 25px;
     text-align: center;
-} */
+}
+
+.react-datetime-picker__wrapper {
+    background-color: #D4D4D4;
+    border-radius: 10px;
+    border: none;
+}
 
 .kreiraj {
     margin-left: 100px;

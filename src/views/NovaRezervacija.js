@@ -99,7 +99,7 @@ function NovaRezervacija() {
           <div class="flex_column">
             <div class="odabir_usluga">
               <h2>Odabir usluge</h2>
-              <select class="ui dropdown">
+              <select class="ui_dropdown">
                 <option value="">Usluge</option>
                 <option value="1">Usluga 1</option>
                 <option value="0">Usluga 2</option>

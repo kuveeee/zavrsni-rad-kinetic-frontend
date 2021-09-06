@@ -53,9 +53,11 @@
     border: none;
     margin-top: 10px;
     margin-bottom: 22px;
+    padding-left: 17px;
 }
 
 .naplacivanje_body input:hover {
+    background-color: #50C3BF;
     transition: transform 0.3s;
     transform: scale(1.1);
 }

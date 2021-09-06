@@ -6,7 +6,7 @@ function Naplacivanje() {
         <div class="naplacivanje_body">
             <h1>Naplaćivanje</h1>
             <div class="break"></div>
-            <h6>Klijent</h6>
+            <h6>Pacijent</h6>
             <div class="break"></div>
             <select class="ui dropdown">
                 <option value="">Klijent</option>
@@ -53,7 +53,7 @@ function Naplacivanje() {
             <div class="break"></div>
             <h6>Cijena</h6>
             <div class="break"></div>
-            <input type="text"></input>        
+            <input type="text"></input>
         </div>
     </div>
 }
