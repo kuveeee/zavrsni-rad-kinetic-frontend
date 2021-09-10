@@ -30,12 +30,12 @@ function Dashboard() {
               <h1>Nadzorna ploča</h1>
             </div>
             <div class="break"></div>
-            <Link style={{textDecoration: "none"}} exact to="/Kalendar">
+            <Link style={{ textDecoration: "none" }} exact to="/Kalendar">
               <div class="kalendar" >
                 <p>Kalendar</p>
               </div>
             </Link>
-            <Link style={{textDecoration: "none"}} exact to="/Nova-Rezervacija">
+            <Link style={{ textDecoration: "none" }} exact to="/Nova-Rezervacija">
               <div class="nova_rezervacija" >
                 <p>Nova rezervacija</p>
                 <img src={new_reservation} alt="Slika za dodavanje nove rezervacije"></img>
@@ -45,18 +45,20 @@ function Dashboard() {
               <p></p>
             </div>
             <div class="break"></div>
-            <Link style={{textDecoration: "none"}} exact to="/Klijenti">
+            <Link style={{ textDecoration: "none" }} exact to="/Klijenti">
               <div class="klijenti" >
                 <p>Klijenti</p>
                 <img src={clients_chart} alt="Graf s klijentima"></img>
               </div>
             </Link>
-            <div class="financije" >
-              <p>Financije</p>
-              <img src={finantion_chart} alt="Graf koji prikazuje prihoda"></img>
-            </div>
+            <Link style={{ textDecoration: "none" }} exact to="/Fijancije">
+              <div class="financije" >
+                <p>Financije</p>
+                <img src={finantion_chart} alt="Graf koji prikazuje prihoda"></img>
+              </div>
+            </Link>
             <div class="break"></div>
-            <Link style={{textDecoration: "none"}} exact to="/Usluge">
+            <Link style={{ textDecoration: "none" }} exact to="/Usluge">
               <div class="usluge" >
                 <p>Usluge</p>
                 <div class="dashboard_tablica">
@@ -66,7 +68,7 @@ function Dashboard() {
                 </div>
               </div>
             </Link>
-            <Link style={{textDecoration: "none"}} exact to="/naplacivanje">
+            <Link style={{ textDecoration: "none" }} exact to="/naplacivanje">
               <div class="naplacivanje" >
                 <p>Naplaćivanje</p>
               </div>

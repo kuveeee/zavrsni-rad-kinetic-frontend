@@ -9,7 +9,7 @@ function Naplacivanje() {
             <h6>Pacijent</h6>
             <div class="break"></div>
             <select class="ui dropdown">
-                <option value="">Klijent</option>
+                <option value="">Pacijent</option>
                 <option value="1">Saaed Kay</option>
                 <option value="0">Saaed Kay</option>
                 <option value="2">Saaed Kay</option>

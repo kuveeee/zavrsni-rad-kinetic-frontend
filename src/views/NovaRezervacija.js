@@ -109,6 +109,11 @@ function NovaRezervacija() {
               </select>
               <div class="break"></div>
             </div>
+            <div class="odabir_dijagnoze">
+              <h2>Dijagnoza</h2>
+              <input type="text"></input>
+              <div class="break"></div>
+            </div>
             <div class="odabir_termina">
               <h2>Odabir termina</h2>
               <div className="Sample">
