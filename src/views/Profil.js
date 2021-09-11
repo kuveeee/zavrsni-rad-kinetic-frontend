@@ -1,7 +1,8 @@
 import React from 'react';
 //import * as Icons from '@material-ui/icons';
 import '../assets/styles/Profil.css';
-import user from '../assets/images/user.png';
+//import user from '../assets/images/user.png';
+import woman from '../assets/images/woman.png';
 
 function Profil() {
     return <div className="main">
@@ -9,8 +10,8 @@ function Profil() {
             <h1>Profil</h1>
             <div class="break"></div>
             <div class="profil">
-                <div class="break"></div>            
-                <img class="user" src={user} alt="Korisnik"></img>
+                <div class="break"></div>
+                <img class="woman" src={woman} alt="woman"></img>
                 <div class="break"></div>
                 <div class="input">
                     <p>Ime</p>

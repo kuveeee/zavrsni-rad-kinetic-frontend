@@ -43,8 +43,8 @@
 }
 
 .profil img {
-    width: 100px;
-    height: 100px;
+    width: 25%;
+    height: 20%;
 }
 
 .profil input {
@@ -59,7 +59,6 @@
 }
 
 .profil:hover {
-    
     transition: transform 0.3s;
     transform: scale(1.2);
     background: #43425D;
