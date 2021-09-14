@@ -83,7 +83,7 @@ function Dashboard() {
                 <DayView
                   startDayHour={7}
                   endDayHour={16}
-                  excludedDays={[0, 6]}
+                  excludedDays={[0, 6]} //Ne prikazujemo subotu i nedjelju
                 />
                 <Appointments />
               </Scheduler>
