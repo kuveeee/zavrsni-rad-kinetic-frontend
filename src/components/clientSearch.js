@@ -6,7 +6,7 @@ function ClientSearch() {
     return <div class="client_search">
         <div class="search">
             <Icons.Search />
-            <input placeholder="Pretraga klijenata"></input>
+            <input placeholder="Pretraga pacijenata"></input>
         </div>
     </div>
 }

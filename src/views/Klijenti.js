@@ -7,10 +7,10 @@ function Klijenti() {
   return <div className="main">
     <div class="klijenti_body">
       <div class="flex_row">
-        <h1 class="h1">Klijenti</h1>
+        <h1 class="h1">Pacijenti</h1>
         <div class="novi_klijent">
           <img src={plus} alt="Dodavanje novog klijenta"></img>
-          <h3>Novi klijent</h3>
+          <h3>Novi pacijent</h3>
         </div>
       </div>
       <div class="flex_row">
