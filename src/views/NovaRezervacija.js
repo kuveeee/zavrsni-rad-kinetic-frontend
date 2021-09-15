@@ -70,7 +70,7 @@ function NovaRezervacija() {
   return <div className="main">
     <div class="flex_row">
       <div class="flex_column">
-        <div class="body">
+        <div class="novaRezervacija_body">
           <h1>Nova rezervacija</h1>
           <div class="break"></div>
           <div class="klijent">

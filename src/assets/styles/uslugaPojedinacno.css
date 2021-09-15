@@ -18,7 +18,6 @@
     background: #4CC3BE 0% 0% no-repeat padding-box;
     border-radius: 12px;
     color: white;
-    font-size: 12px;
     display: table;
     margin-right: 40px;
     margin-top: 5px;
@@ -26,6 +25,7 @@
 }
 
 .usluga p {
+    font-size: 18px;
     display: table-cell;
     vertical-align: middle;
     color: white;
@@ -33,12 +33,11 @@
 }
 
 .trajanje {
-    width: 120px;
+    width: 140px;
     height: 39px;
     background: #4CC3BE 0% 0% no-repeat padding-box;
     border-radius: 12px;
     color: white;
-    font-size: 12px;
     display: table;
     margin-right: 40px;
     margin-top: 5px;
@@ -46,6 +45,7 @@
 }
 
 .trajanje p {
+    font-size: 18px;
     display: table-cell;
     vertical-align: middle;
     color: white;
@@ -53,18 +53,18 @@
 }
 
 .cijena {
-    width: 120px;
+    width: 130px;
     height: 39px;
     background: #4CC3BE 0% 0% no-repeat padding-box;
     border-radius: 12px;
     color: white;
-    font-size: 12px;
     display: table;
     margin-top: 5px;
     padding-left: 12px;
 }
 
 .cijena p {
+    font-size: 18px;
     display: table-cell;
     vertical-align: middle;
     color: white;
