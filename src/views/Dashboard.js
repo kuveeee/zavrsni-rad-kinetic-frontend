@@ -45,9 +45,9 @@ function Dashboard() {
               <p></p>
             </div>
             <div class="break"></div>
-            <Link style={{ textDecoration: "none" }} exact to="/Klijenti">
+            <Link style={{ textDecoration: "none" }} exact to="/Pacijenti">
               <div class="klijenti" >
-                <p>Klijenti</p>
+                <p>Pacijenti</p>
                 <img src={clients_chart} alt="Graf s klijentima"></img>
               </div>
             </Link>
