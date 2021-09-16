@@ -16,5 +16,5 @@ Aplikacija se pokreće i kreira se link na localhost za pregled u pregledniku.\
 Stranica se automatski osvježava prilikom uređivanja koda i prikazuju se greške ukoliko ih ima.
 
 ### Deployment
-Projekt je hostan na: [Vercel](https://vercel.com/)
+Projekt je hostan na: [Vercel](https://vercel.com/)/
 Link na live wep aplikaciju: (https://zavrsni-rad-kinetic-frontend.vercel.app/)

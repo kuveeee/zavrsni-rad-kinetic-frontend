@@ -24,7 +24,7 @@ function Login() {
                         <div class="break"></div>
                         <input type="email" placeholder="e-mail"></input>
                         <div class="break"></div>
-                        <input type="password" placeholder="ponovite zaporku"></input>
+                        <input type="password" placeholder="zaporka"></input>
                         <div class="break"></div>
                         <button class="prijava">
                             <p>Prijava</p>
