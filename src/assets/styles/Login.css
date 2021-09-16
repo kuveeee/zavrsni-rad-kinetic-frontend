@@ -59,10 +59,15 @@ body {
     font-size: 25px;
 }
 
-input {
+.login_body input {
     width: 270px;
-    height: 20px;
+    height: 30px;
     margin-bottom: 30px;
+    background: #E6EAED;
+    border-radius: 12px;
+    padding-left: 15px;
+    font-size: 18px;
+    border: none;
 }
 
 .prijava {
