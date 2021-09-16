@@ -1,17 +1,20 @@
 import React from 'react';
 import '../assets/styles/Klijenti.css';
+import { Link } from 'react-router-dom';
 import ClientSearch from '../components/clientSearch';  //komponenta za pretragu klijenata
 import plus from '../assets/images/usluge/plus.png';
 
-function Klijenti() {
+function Pacijenti() {
   return <div className="main">
     <div class="klijenti_body">
       <div class="flex_row">
         <h1 class="h1">Pacijenti</h1>
-        <div class="novi_klijent">
-          <img src={plus} alt="Dodavanje novog klijenta"></img>
-          <h3>Novi pacijent</h3>
-        </div>
+        <Link style={{ textDecoration: "none" }} exact to="/noviPacijent">
+          <div class="novi_klijent">
+            <img src={plus} alt="Dodavanje novog klijenta"></img>
+            <h3>Novi pacijent</h3>
+          </div>
+        </Link>
       </div>
       <div class="flex_row">
         <ClientSearch />
@@ -106,4 +109,4 @@ function Klijenti() {
   </div>;
 }
 
-export default Klijenti;
+export default Pacijenti;

@@ -8,7 +8,7 @@ function Login() {
         <div class="login_body">
             <div class="flex_row">
                 <div class="flex_column">
-                    <img class="physical_image" src={physical_image} alt="Physical image" />
+                    <img class="physical_image" src={physical_image} alt="Physical imagee" />
                 </div>
                 <div class="flex_column">
                     <div class="login_form">
