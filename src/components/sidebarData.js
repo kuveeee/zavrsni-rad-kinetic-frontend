@@ -43,4 +43,10 @@ export const sidebarData = [
     icon: <Icons.Person />,
     cName: 'nav-text',
   },
+  {
+    title: 'Login',
+    path: '/login',
+    icon: <Icons.Person />,
+    cName: 'nav-text',
+  },
 ];

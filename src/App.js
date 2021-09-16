@@ -8,6 +8,7 @@ import NovaRezervacija from './views/NovaRezervacija';
 import Naplacivanje from './views/Naplacivanje';
 import Profil from './views/Profil';
 import Kalendar from './views/Kalendar';
+import Login from './views/Login';
 
 const App = () => {
   return (
@@ -22,6 +23,7 @@ const App = () => {
           <Route path="/nova-rezervacija" component={NovaRezervacija} />
           <Route path="/naplacivanje" component={Naplacivanje} />
           <Route path="/profil" component={Profil} />
+          <Route path="/login" component={Login} />
         </Switch>
       </Router>
     </div>
