@@ -13,9 +13,9 @@ function Klijenti() {
     console.log(clients);
   };
 
-  useEffect(() => {
-    getClients();
-  }, []);
+  // useEffect(() => {
+  //   getClients();
+  // }, []);
 
   return (
     <div className="main">
