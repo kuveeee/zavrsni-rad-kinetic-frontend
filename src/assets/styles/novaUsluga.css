@@ -1,0 +1,39 @@
+.novaUsluga_body {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+}
+
+.flex_row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    padding-bottom: 500px;
+}
+
+.flex_column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+}
+.novaUsluga_body h1 {
+    font-size: 45px;
+    font-weight: bold;
+    color: #43425D;
+    text-shadow: 0px 3px 6px #0000001A;
+    padding-right: 800px;
+}
+
+.novaUsluga_body .klijent{
+    height: 380px;
+}
+
+.input_ime input{
+    width: 300px;
+}
+
+.input_cijena input{
+    width: 150px;
+}
