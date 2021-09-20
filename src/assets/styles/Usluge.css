@@ -20,6 +20,7 @@
     align-self: center;
     display: table;
     position: relative;
+    margin-top: 30px;
     padding-left: 20px;
     padding-right: 20px;
 }

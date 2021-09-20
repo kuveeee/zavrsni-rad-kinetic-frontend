@@ -9,7 +9,6 @@
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
-    padding-bottom: 500px;
 }
 
 .flex_column {
@@ -24,7 +23,7 @@
     font-weight: bold;
     color: #43425D;
     text-shadow: 0px 3px 6px #0000001A;
-    padding-right: 800px;
+    padding-right: 600px;
 }
 
 .novi_klijent {
@@ -36,6 +35,7 @@
     align-self: center;
     display: table;
     position: relative;
+    margin-top: 30px;
     padding-left: 20px;
     padding-right: 20px;
 }

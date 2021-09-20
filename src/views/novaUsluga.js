@@ -22,6 +22,7 @@ function novaUsluga() {
                     </div>
                 </div>
             </div>
+            <button>Dodaj</button>
         </div>
     </div>;
 }

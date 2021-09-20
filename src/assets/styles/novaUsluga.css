@@ -9,7 +9,6 @@
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
-    padding-bottom: 500px;
 }
 
 .flex_column {
@@ -18,6 +17,7 @@
     flex-basis: 100%;
     flex: 1;
 }
+
 .novaUsluga_body h1 {
     font-size: 45px;
     font-weight: bold;
@@ -26,14 +26,25 @@
     padding-right: 800px;
 }
 
-.novaUsluga_body .klijent{
+.novaUsluga_body .klijent {
     height: 380px;
 }
 
-.input_ime input{
+.input_ime input {
     width: 300px;
 }
 
-.input_cijena input{
+.input_cijena input {
     width: 150px;
+}
+
+.novaUsluga_body button {
+    background: #4cc3be;
+    border-radius: 12px;
+    width: 185px;
+    height: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 30px;
 }
