@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 let Service = axios.create({
-  baseURL: `http://localhost:5000`,
+  baseURL: `https://kinetic-db.herokuapp.com`,
   headers: {
     Accept: 'application/json',
     'Content-Type': 'application/json',
