@@ -10,6 +10,8 @@ import DateTimePicker from 'react-datetime-picker'; //  Datetime picker
 toast.configure()
 function NovaRezervacija() {
 
+  // {notify_success} za pozivanje notifikacije
+
   // const notify = () => {
   //   toast('🦄', {
   //     position: "top-right",
@@ -65,9 +67,8 @@ function NovaRezervacija() {
   //     progress: undefined,
   //   });
   // }
-
   const [value, onChange] = useState(new Date());
-  const url = "https://kinetic-db.herokuapp.com"
+  const url = "https://kinetic-db.herokuapp.com/clients"
   const [data, setData] = useState({
     client_first_name: "",
     client_last_name: "",
@@ -104,7 +105,7 @@ function NovaRezervacija() {
           {/* <PostForm /> */}
           <div class="break"></div>
           <div class="klijent">
-            <form onChange={(e) => submit(e)}>
+            <form onSubmit={(e) => submit(e)}>
               {/* <img class="woman" src={woman} alt="woman"></img> */}
               <div class="input1">
                 <p>Ime</p>
@@ -127,7 +128,7 @@ function NovaRezervacija() {
                 <input type="email" onChange={(e) => handle(e)} id="client_email" value={data.client_email}></input>
               </div>
               <div class="kreiraj">
-                <button class="button_kreiraj" onClick={notify_success}>Kreiraj</button>
+                <button>Kreiraj</button>
               </div>
             </form>
           </div>
