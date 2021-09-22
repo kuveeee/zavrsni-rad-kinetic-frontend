@@ -4,7 +4,8 @@ import Axios from 'axios'
 import 'react-toastify/dist/ReactToastify.css';//       Notifications styles
 import '../assets/styles/NovaRezervacija.css'; //       asset
 // import woman from '../assets/images/woman.png'; //      asset
-import DateTimePicker from 'react-datetime-picker'; //  Datetime picker
+//import DateTimePicker from 'react-datetime-picker'; //  Datetime picker
+//import TimeRangePicker from '@wojtekmaj/react-timerange-picker';
 // import PostForm from '../components/PostForm'
 
 // toast.configure()
@@ -67,25 +68,36 @@ function NovaRezervacija() {
   //     progress: undefined,
   //   });
   // }
-  const [value, onChange] = useState(new Date());
-  const url = "https://kinetic-db.herokuapp.com/clients"
+  const url = "https://kinetic-db.herokuapp.com/reservations"
   const [data, setData] = useState({
     client_first_name: "",
     client_last_name: "",
+    reservation_start: "",
+    reservation_end: "",
+    reservation_name: "",
     client_sex: "",
     client_phone_number: "",
     client_birth_date: "",
     client_email: "",
   })
+
+  var pocetni_datum = [
+    data.reservation_start,
+  ]
+  const reservation_start = pocetni_datum.map(date => new Date(date).getTime())
+
   function submit(e) {
     e.preventDefault();
     Axios.post(url, {
       client_first_name: data.client_first_name,
       client_last_name: data.client_last_name,
+      reservation_start: data.reservation_start,
+      reservation_end: data.reservation_end,
+      reservation_name: data.reservation_name,
       client_sex: data.client_sex,
       client_phone_number: data.client_phone_number,
       client_birth_date: data.client_birth_date,
-      client_email: data.client_email
+      client_email: data.client_email,
     })
       .then(res => {
         console.log(res.data)
@@ -101,11 +113,11 @@ function NovaRezervacija() {
     <div class="flex_row">
       <div class="flex_column">
         <div class="novaRezervacija_body">
-          <h1>Nova rezervacija</h1>
-          {/* <PostForm /> */}
-          <div class="break"></div>
-          <div class="klijent">
-            <form onSubmit={(e) => submit(e)}>
+          <form onSubmit={(e) => submit(e)}>
+            <h1>Nova rezervacija</h1>
+            {/* <PostForm /> */}
+            <div class="break"></div>
+            <div class="klijent">
               {/* <img class="woman" src={woman} alt="woman"></img> */}
               <div class="input1">
                 <p>Ime</p>
@@ -130,30 +142,28 @@ function NovaRezervacija() {
               <div class="kreiraj">
                 <button>Kreiraj</button>
               </div>
-            </form>
-          </div>
-          <div class="flex_column">
-            <div class="grayed_out">
-              <div class="odabir_usluga">
-                <h2>Odabir usluge</h2>
-                <select class="ui_dropdown">
-                  <option value="">Usluge</option>
-                  <option value="1">Usluga 1</option>
-                  <option value="0">Usluga 2</option>
-                  <option value="0">Usluga 3</option>
-                  <option value="0">Usluga 4</option>
-                  <option value="0">Usluga 5</option>
-                </select>
-                <div class="break"></div>
-              </div>
-              <div class="odabir_dijagnoze">
-                <h2>Dijagnoza</h2>
-                <input type="text"></input>
-                <div class="break"></div>
-              </div>
+            </div>
+            <div class="flex_column">
               <div class="odabir_termina">
-                <h2>Odabir termina</h2>
-                <div className="Sample">
+                <h2>Odaberite početni datum i vrijeme rezervacije</h2>
+                <input onChange={(e) => handle(e)} value={data.reservation_start} type="datetime-local"></input>
+                <h2>Odaberite krajnji datum i vrijeme rezervacije</h2>
+                <input onChange={(e) => handle(e)} value={data.reservation_end} type="datetime-local"></input>
+                <h2>Upišite naziv rezervacije</h2>
+                <input onChange={(e) => handle(e)} value={data.reservation_name} type="text"></input>
+                <div class="odabir_usluga">
+                  <h2>Odabir usluge</h2>
+                  <select class="ui_dropdown">
+                    <option value="">Usluge</option>
+                    <option value="1">Usluga 1</option>
+                    <option value="0">Usluga 2</option>
+                    <option value="0">Usluga 3</option>
+                    <option value="0">Usluga 4</option>
+                    <option value="0">Usluga 5</option>
+                  </select>
+                  <div class="break"></div>
+                </div>
+                {/* <div className="Sample">
                   <div className="Sample__container">
                     <main className="Sample__container__content">
                       <DateTimePicker
@@ -173,13 +183,17 @@ function NovaRezervacija() {
                       />
                     </main>
                   </div>
+                </div> */}
+              </div>
+              <div class="grayed_out">
+                <div class="odabir_dijagnoze">
+                  <h2>Dijagnoza</h2>
+                  <input type="text"></input>
+                  <div class="break"></div>
                 </div>
               </div>
-              {/* <div class="kreiraj">
-              <button class="button_kreiraj" onClick={notify_success}>Kreiraj</button>
-            </div> */}
             </div>
-          </div>
+          </form>
         </div>
       </div>
     </div>

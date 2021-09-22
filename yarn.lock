@@ -2348,6 +2348,18 @@
   "resolved" "https://registry.npmjs.org/@wojtekmaj/date-utils/-/date-utils-1.0.3.tgz"
   "version" "1.0.3"
 
+"@wojtekmaj/react-timerange-picker@^3.4.0":
+  "integrity" "sha512-yS0zb9WuiY05whb0THL0cdkCWJ8ovLH8E+CSLqfvZaSHmwDGNY44GYNyEBPelwUTFuaFjOwBWfTo6oqPJ6SOpQ=="
+  "resolved" "https://registry.npmjs.org/@wojtekmaj/react-timerange-picker/-/react-timerange-picker-3.4.0.tgz"
+  "version" "3.4.0"
+  dependencies:
+    "make-event-props" "^1.1.0"
+    "merge-class-names" "^1.1.1"
+    "prop-types" "^15.6.0"
+    "react-clock" "^3.0.0"
+    "react-fit" "^1.0.3"
+    "react-time-picker" "^4.4.1"
+
 "@xtuc/ieee754@^1.2.0":
   "integrity" "sha512-DX8nKgqcGwsc0eJSqYt5lwP4DH5FlHnmuWWBRy7X0NcaGR0ZtuyeESgMwTYVEtxmsNGY+qit4QYT/MIYTOTPeA=="
   "resolved" "https://registry.npmjs.org/@xtuc/ieee754/-/ieee754-1.2.0.tgz"
@@ -9629,7 +9641,7 @@
     "strip-ansi" "6.0.0"
     "text-table" "0.2.0"
 
-"react-dom@^17.0.2":
+"react-dom@^16.3.0 || ^17.0.0-0", "react-dom@^17.0.2":
   "integrity" "sha512-s4h96KtLDUQlsENhMn1ar8t2bEa+q/YAtj8pPPdIjPDGBDIVNsrD9aXNWqspUe6AzKCIG0C1HZZLqLV7qpOBGA=="
   "resolved" "https://registry.npmjs.org/react-dom/-/react-dom-17.0.2.tgz"
   "version" "17.0.2"
@@ -9810,7 +9822,7 @@
     "loose-envify" "^1.4.0"
     "prop-types" "^15.6.2"
 
-"react@^17.0.2":
+"react@^16.3.0 || ^17.0.0-0", "react@^17.0.2":
   "integrity" "sha512-gnhPt75i/dq/z3/6q/0asP78D0u592D5L1pd7M8P+dck6Fu/jJeL6iVVK23fptSUZj8Vjf++7wXA8UNclGQcbA=="
   "resolved" "https://registry.npmjs.org/react/-/react-17.0.2.tgz"
   "version" "17.0.2"

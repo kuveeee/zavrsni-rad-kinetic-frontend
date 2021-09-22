@@ -51,7 +51,7 @@ h2 {
     display: flex;
     flex-wrap: wrap;
     padding: 10px 20px 10px 20px;
-    margin-right: 60px !important;
+    /* margin-right: 60px !important; */
 }
 
 .klijent img {
@@ -120,8 +120,6 @@ h2 {
 
 .odabir_usluga {
     align-content: space-between;
-    margin-left: 100px;
-    margin-top: 200px !important;
 }
 
 .odabir_usluga h2 {
@@ -173,8 +171,12 @@ h2 {
 }
 
 .odabir_termina h2 {
+    margin-top: 25px !important;
     font-size: 20px;
-    margin-bottom: 18px;
+}
+
+.odabir_termina input{
+    margin-bottom: 40px;
 }
 
 .react-datetime-picker__inputGroup__divider {
