@@ -7,7 +7,7 @@ import '../assets/styles/NovaRezervacija.css'; //       asset
 import DateTimePicker from 'react-datetime-picker'; //  Datetime picker
 // import PostForm from '../components/PostForm'
 
-toast.configure()
+// toast.configure()
 function NovaRezervacija() {
 
   // {notify_success} za pozivanje notifikacije
@@ -23,17 +23,17 @@ function NovaRezervacija() {
   //     progress: undefined,
   //   });
   // }
-  const notify_success = () => {
-    toast.success('🦄', {
-      position: "top-right",
-      autoClose: 5000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-    });
-  }
+  // const notify_success = () => {
+  //   toast.success('🦄', {
+  //     position: "top-right",
+  //     autoClose: 5000,
+  //     hideProgressBar: false,
+  //     closeOnClick: true,
+  //     pauseOnHover: true,
+  //     draggable: true,
+  //     progress: undefined,
+  //   });
+  // }
   // const notify_error = () => {
   //   toast.error('🦄', {
   //     position: "top-right",
