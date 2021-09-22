@@ -69,22 +69,22 @@ function NovaRezervacija() {
   const [value, onChange] = useState(new Date());
   const url = "https://kinetic-db.herokuapp.com"
   const [data, setData] = useState({
-    firstname: "",
-    lastname: "",
-    gender: "",
-    phonenumber: "",
-    date: "",
-    email: "",
+    client_first_name: "",
+    client_last_name: "",
+    client_sex: "",
+    client_phone_number: "",
+    client_birth_date: "",
+    client_email: "",
   })
   function submit(e) {
     e.preventDefault();
     Axios.post(url, {
-      firstname: data.firstname,
-      lastname: data.lastname,
-      gender: data.gender,
-      phonenumber: data.phonenumber,
-      date: data.date,
-      email: data.email
+      client_first_name: data.client_first_name,
+      client_last_name: data.client_last_name,
+      client_sex: data.client_sex,
+      client_phone_number: data.client_phone_number,
+      client_birth_date: data.client_birth_date,
+      client_email: data.client_email
     })
       .then(res => {
         console.log(res.data)
@@ -108,23 +108,23 @@ function NovaRezervacija() {
               {/* <img class="woman" src={woman} alt="woman"></img> */}
               <div class="input1">
                 <p>Ime</p>
-                <input type="text" onChange={(e) => handle(e)} id="firstname" value={data.firstname}></input>
+                <input type="text" onChange={(e) => handle(e)} id="client_first_name" value={data.client_first_name}></input>
                 <p>Prezime</p>
-                <input type="text" onChange={(e) => handle(e)} id="lastname" value={data.lastname}></input>
+                <input type="text" onChange={(e) => handle(e)} id="client_last_name" value={data.client_last_name}></input>
               </div>
               <div class="input2">
                 <p>Spol</p>
-                <select class="ui dropdown" onChange={(e) => handle(e)} id="gender" value={data.gender}>
+                <select class="ui dropdown" onChange={(e) => handle(e)} id="client_sex" value={data.client_sex}>
                   <option value="">Spol</option>
                   <option value="1">Muškarac</option>
                   <option value="0">Žena</option>
                 </select>
                 <p>Broj telefona</p>
-                <input type="text" onChange={(e) => handle(e)} id="phonenumber" value={data.phonenumber}></input>
+                <input type="text" onChange={(e) => handle(e)} id="client_phone_number" value={data.client_phone_number}></input>
                 <p>Datum rođenja</p>
-                <input type="date" onChange={(e) => handle(e)} id="date" value={data.date}></input>
+                <input type="date" onChange={(e) => handle(e)} id="client_birth_date" value={data.client_birth_date}></input>
                 <p>E-pošta</p>
-                <input type="email" onChange={(e) => handle(e)} id="email" value={data.email}></input>
+                <input type="email" onChange={(e) => handle(e)} id="client_email" value={data.client_email}></input>
               </div>
               <div class="kreiraj">
                 <button class="button_kreiraj" onClick={notify_success}>Kreiraj</button>

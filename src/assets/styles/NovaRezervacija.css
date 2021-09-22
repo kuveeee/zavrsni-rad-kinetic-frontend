@@ -121,6 +121,7 @@ h2 {
 .odabir_usluga {
     align-content: space-between;
     margin-left: 100px;
+    margin-top: 200px !important;
 }
 
 .odabir_usluga h2 {
