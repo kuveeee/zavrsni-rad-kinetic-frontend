@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import Axios from 'axios'
-import { toast } from 'react-toastify'; //               Notifications
+//import { toast } from 'react-toastify'; //               Notifications
 import 'react-toastify/dist/ReactToastify.css';//       Notifications styles
 import '../assets/styles/NovaRezervacija.css'; //       asset
 // import woman from '../assets/images/woman.png'; //      asset
