@@ -132,50 +132,52 @@ function NovaRezervacija() {
             </form>
           </div>
           <div class="flex_column">
-            <div class="odabir_usluga">
-              <h2>Odabir usluge</h2>
-              <select class="ui_dropdown">
-                <option value="">Usluge</option>
-                <option value="1">Usluga 1</option>
-                <option value="0">Usluga 2</option>
-                <option value="0">Usluga 3</option>
-                <option value="0">Usluga 4</option>
-                <option value="0">Usluga 5</option>
-              </select>
-              <div class="break"></div>
-            </div>
-            <div class="odabir_dijagnoze">
-              <h2>Dijagnoza</h2>
-              <input type="text"></input>
-              <div class="break"></div>
-            </div>
-            <div class="odabir_termina">
-              <h2>Odabir termina</h2>
-              <div className="Sample">
-                <div className="Sample__container">
-                  <main className="Sample__container__content">
-                    <DateTimePicker
-                      amPmAriaLabel="Select AM/PM"
-                      calendarAriaLabel="Toggle calendar"
-                      clearAriaLabel="Clear value"
-                      dayAriaLabel="Day"
-                      hourAriaLabel="Hour"
-                      minuteAriaLabel="Minute"
-                      monthAriaLabel="Month"
-                      nativeInputAriaLabel="Date and time"
-                      onChange={onChange}
-                      secondAriaLabel="Second"
-                      value={value}
-                      yearAriaLabel="Year"
-                      maxDetail="minute" //ograničavanje na sate i minute, sekunde nam ne trebaju
-                    />
-                  </main>
+            <div class="grayed_out">
+              <div class="odabir_usluga">
+                <h2>Odabir usluge</h2>
+                <select class="ui_dropdown">
+                  <option value="">Usluge</option>
+                  <option value="1">Usluga 1</option>
+                  <option value="0">Usluga 2</option>
+                  <option value="0">Usluga 3</option>
+                  <option value="0">Usluga 4</option>
+                  <option value="0">Usluga 5</option>
+                </select>
+                <div class="break"></div>
+              </div>
+              <div class="odabir_dijagnoze">
+                <h2>Dijagnoza</h2>
+                <input type="text"></input>
+                <div class="break"></div>
+              </div>
+              <div class="odabir_termina">
+                <h2>Odabir termina</h2>
+                <div className="Sample">
+                  <div className="Sample__container">
+                    <main className="Sample__container__content">
+                      <DateTimePicker
+                        amPmAriaLabel="Select AM/PM"
+                        calendarAriaLabel="Toggle calendar"
+                        clearAriaLabel="Clear value"
+                        dayAriaLabel="Day"
+                        hourAriaLabel="Hour"
+                        minuteAriaLabel="Minute"
+                        monthAriaLabel="Month"
+                        nativeInputAriaLabel="Date and time"
+                        onChange={onChange}
+                        secondAriaLabel="Second"
+                        value={value}
+                        yearAriaLabel="Year"
+                        maxDetail="minute" //ograničavanje na sate i minute, sekunde nam ne trebaju
+                      />
+                    </main>
+                  </div>
                 </div>
               </div>
-            </div>
-            {/* <div class="kreiraj">
+              {/* <div class="kreiraj">
               <button class="button_kreiraj" onClick={notify_success}>Kreiraj</button>
             </div> */}
+            </div>
           </div>
         </div>
       </div>
