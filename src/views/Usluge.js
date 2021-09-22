@@ -1,12 +1,24 @@
-import React from 'react';
+import React, { useEffect }  from 'react';
 import '../assets/styles/Usluge.css';
 import { Link } from 'react-router-dom';
 import UslugaPojedinacno from '../components/uslugaPojedinacno';
 import plus from '../assets/images/usluge/plus.png';
+import { Services } from '../services/index';
 // import trajanje from '../assets/images/usluge/trajanje.png';
 // import cijena from '../assets/images/usluge/cijena.png';
 
 function Usluge() {
+  const [services, setServices] = React.useState([]);
+
+  const getServices = async () => {
+    let res = await Services.getAllServices();
+    setServices(res);
+    console.log(services);
+  };
+  useEffect(() => {
+    getServices();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
   return <div className="main">
     <div class="flex_row">
       <div class="flex_column">

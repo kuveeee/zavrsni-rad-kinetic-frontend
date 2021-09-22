@@ -1,7 +1,7 @@
 import React from 'react';
 import '../assets/styles/novaUsluga.css';
 
-function novaUsluga() {
+function NovaUsluga() {
     return <div className="main">
         <div class="novaUsluga_body">
             <div class="flex_row">
@@ -27,4 +27,4 @@ function novaUsluga() {
     </div>;
 }
 
-export default novaUsluga;
+export default NovaUsluga;

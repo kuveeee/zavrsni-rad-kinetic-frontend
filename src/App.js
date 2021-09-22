@@ -3,14 +3,14 @@ import './App.css'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Dashboard from './views/Dashboard'
 import Klijenti from './views/Klijenti'
-import NoviPacijent from './views/noviPacijent' //forma za dodavanje novog pacijenta, bez rezervacije
+import NoviPacijent from './views/NoviPacijent' //forma za dodavanje novog pacijenta, bez rezervacije
 import Usluge from './views/Usluge'
 import NovaRezervacija from './views/NovaRezervacija'
 import Naplacivanje from './views/Naplacivanje'
 import Profil from './views/Profil'
 import Kalendar from './views/Kalendar'
 import Login from './views/Login'
-import novaUsluga from './views/novaUsluga' //forma za dodavanje nove usluge
+import NovaUsluga from './views/NovaUsluga' //forma za dodavanje nove usluge
 
 const App = () => {
   return (
@@ -27,7 +27,7 @@ const App = () => {
           <Route path="/profil" component={Profil} />
           <Route path="/login" component={Login} />
           <Route path="/novi-pacijent" component={NoviPacijent} />
-          <Route path="/nova-usluga" component={novaUsluga} />
+          <Route path="/nova-usluga" component={NovaUsluga} />
         </Switch>
       </Router>
     </div>

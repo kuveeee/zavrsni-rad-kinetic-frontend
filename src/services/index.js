@@ -15,4 +15,11 @@ let Clients = {
   },
 };
 
-export { Clients };
+let Services = {
+  async getAllServices() {
+    let response = await Service.get('/services');
+    return response.data;
+  },
+};
+
+export { Clients, Services };
