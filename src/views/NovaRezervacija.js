@@ -3,7 +3,7 @@ import Axios from 'axios'
 import { toast } from 'react-toastify'; //               Notifications
 import 'react-toastify/dist/ReactToastify.css';//       Notifications styles
 import '../assets/styles/NovaRezervacija.css'; //       asset
-import woman from '../assets/images/woman.png'; //      asset
+// import woman from '../assets/images/woman.png'; //      asset
 import DateTimePicker from 'react-datetime-picker'; //  Datetime picker
 // import PostForm from '../components/PostForm'
 
@@ -67,7 +67,7 @@ function NovaRezervacija() {
   // }
 
   const [value, onChange] = useState(new Date());
-  const url = "http://localhost:10001"
+  const url = "https://kinetic-db.herokuapp.com"
   const [data, setData] = useState({
     firstname: "",
     lastname: "",
@@ -105,7 +105,7 @@ function NovaRezervacija() {
           <div class="break"></div>
           <div class="klijent">
             <form onChange={(e) => submit(e)}>
-              <img class="woman" src={woman} alt="woman"></img>
+              {/* <img class="woman" src={woman} alt="woman"></img> */}
               <div class="input1">
                 <p>Ime</p>
                 <input type="text" onChange={(e) => handle(e)} id="firstname" value={data.firstname}></input>
@@ -126,10 +126,10 @@ function NovaRezervacija() {
                 <p>E-pošta</p>
                 <input type="email" onChange={(e) => handle(e)} id="email" value={data.email}></input>
               </div>
+              <div class="kreiraj">
+                <button class="button_kreiraj" onClick={notify_success}>Kreiraj</button>
+              </div>
             </form>
-          </div>
-          <div class="kreiraj">
-            <button class="button_kreiraj" onClick={notify_success}>Kreiraj</button>
           </div>
           <div class="flex_column">
             <div class="odabir_usluga">
@@ -173,9 +173,9 @@ function NovaRezervacija() {
                 </div>
               </div>
             </div>
-            <div class="kreiraj">
+            {/* <div class="kreiraj">
               <button class="button_kreiraj" onClick={notify_success}>Kreiraj</button>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
