@@ -32,11 +32,11 @@ function NovaUsluga() {
     }
     return <div className="main">
         <div class="novaUsluga_body">
-            <form onSubmit={(e) => submit(e)}>
-                <div class="flex_row">
-                    <h1>Nova usluga</h1>
-                    <div class="break"></div>
-                    <div class="klijent">
+            <div class="flex_row">
+                <h1>Nova usluga</h1>
+                <div class="break"></div>
+                <div class="klijent">
+                    <form onSubmit={(e) => submit(e)}>
                         <div class="input1">
                             <p>Ime usluge</p>
                             <div class="input_ime">
@@ -57,12 +57,14 @@ function NovaUsluga() {
                                 <input onChange={(e) => handle(e)} value={data.service_id} type="number"></input>
                             </div>
                         </div>
+
+                    </form>
+                    <div class="kreiraj">
+                        <button>Kreiraj</button>
                     </div>
                 </div>
-                <div class="kreiraj">
-                    <button>Kreiraj</button>
-                </div>
-            </form>
+            </div>
+
         </div>
     </div>;
 }
