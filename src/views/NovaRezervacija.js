@@ -8,6 +8,7 @@ import '../assets/styles/NovaRezervacija.css'; //       asset
 //import DateTimePicker from 'react-datetime-picker'; //  Datetime picker
 //import TimeRangePicker from '@wojtekmaj/react-timerange-picker';
 // import PostForm from '../components/PostForm'
+const moment = require('moment');
 
 // toast.configure()
 function NovaRezervacija() {
@@ -90,19 +91,24 @@ function NovaRezervacija() {
 
   const url = 'https://kinetic-db.herokuapp.com/reservations';
   const [data, setData] = useState({
-    reservation_serviceID: '',
-    reservation_start: '',
-    reservation_end: '',
-    reservation_name: '',
+    startdate: '',
+    enddate: '',
+    title: '',
+    serviceid: '',
+    clientid: '',
   });
 
   function submit(e) {
     e.preventDefault();
+    let startDateUnix = moment(data.startdate).unix();
+    console.log(startDateUnix);
+    let endDateUnix = moment(data.enddate).unix();
     Axios.post(url, {
-      reservation_start: data.reservation_start,
-      reservation_end: data.reservation_end,
-      reservation_name: data.reservation_name,
-      reservation_serviceID: data.serviceid,
+      startDate: startDateUnix,
+      endDate: endDateUnix,
+      title: data.title,
+      serviceID: data.serviceid,
+      clientID: data.clientid,
     }).then((res) => {
       console.log(res.data);
     });
@@ -125,19 +131,30 @@ function NovaRezervacija() {
                 <h2>Odaberite početni datum i vrijeme rezervacije</h2>
                 <input
                   onChange={(e) => handle(e)}
-                  value={data.reservation_start}
+                  id="startdate"
+                  value={data.startdate}
                   type="datetime-local"
                 ></input>
                 <h2>Odaberite krajnji datum i vrijeme rezervacije</h2>
-                <input onChange={(e) => handle(e)} value={data.reservation_end} type="datetime-local"></input>
+                <input
+                  onChange={(e) => handle(e)}
+                  id="enddate"
+                  value={data.enddate}
+                  type="datetime-local"
+                ></input>
                 <h2>Upišite naziv rezervacije</h2>
-                <input onChange={(e) => handle(e)} value={data.reservation_name} type="text"></input>
+                <input onChange={(e) => handle(e)} id="title" value={data.title} type="text"></input>
                 <div class="odabir_usluga">
                   <h2>Odabir usluge</h2>
 
-                  <select onChange={(e) => handle(e)} value={data.reservation_serviceID} class="ui_dropdown">
+                  <select
+                    onChange={(e) => handle(e)}
+                    id="serviceid"
+                    value={data.serviceid}
+                    class="ui_dropdown"
+                  >
                     {services.map((service) => (
-                      <option value={service.serviceid}>{service.service_name}</option>
+                      <option value={service.service_id}>{service.service_name}</option>
                     ))}
                   </select>
                   <div class="break"></div>
@@ -145,7 +162,7 @@ function NovaRezervacija() {
                 <div class="odabir_usluga">
                   <h2>Odabir klijenta</h2>
 
-                  <select onChange={(e) => handle(e)} value={data.reservation_serviceID} class="ui_dropdown">
+                  <select onChange={(e) => handle(e)} id="clientid" value={data.clientid} class="ui_dropdown">
                     {clients.map((client) => (
                       <option value={client.client_id}>
                         {client.client_first_name + ' ' + client.client_last_name}
@@ -156,13 +173,6 @@ function NovaRezervacija() {
                 </div>
                 <div class="kreiraj">
                   <button>Kreiraj</button>
-                </div>
-              </div>
-              <div class="grayed_out">
-                <div class="odabir_dijagnoze">
-                  <h2>Dijagnoza</h2>
-                  <input type="text"></input>
-                  <div class="break"></div>
                 </div>
               </div>
             </form>
