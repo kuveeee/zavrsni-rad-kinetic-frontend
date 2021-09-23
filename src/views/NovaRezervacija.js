@@ -81,10 +81,10 @@ function NovaRezervacija() {
     client_email: "",
   })
 
-  var pocetni_datum = [
-    data.reservation_start,
-  ]
-  const reservation_start = pocetni_datum.map(date => new Date(date).getTime())
+  // var pocetni_datum = [
+  //   data.reservation_start,
+  // ]
+  // const reservation_start = pocetni_datum.map(date => new Date(date).getTime())
 
   function submit(e) {
     e.preventDefault();
