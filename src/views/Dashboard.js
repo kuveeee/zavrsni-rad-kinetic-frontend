@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import '../assets/styles/Dashboard.css';
 import new_reservation from '../assets/images/new_reservation.png';
 import finantion_chart from '../assets/images/finantion_chart.png';
 import clients_chart from '../assets/images/clients_chart.png';
-
+import { Services } from '../services/index';
 import Paper from '@material-ui/core/Paper'; //vizualni dio za kalendar
 import { ViewState } from '@devexpress/dx-react-scheduler';
 import {
@@ -21,6 +21,17 @@ const schedulerData = [
 
 
 function Dashboard() {
+  const [services, setServices] = React.useState([]);
+
+  const getServices = async () => {
+    let res = await Services.getAllServices();
+    setServices(res);
+    console.log(services);
+  };
+  useEffect(() => {
+    getServices();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
   return <div className="main">
     <div class="dashboard_body">
       <div class="flex_row">
@@ -66,6 +77,14 @@ function Dashboard() {
                   <li>Trajanje</li>
                   <li>Cijena</li>
                 </div>
+                {services.map((service) => (
+                  <div class="dashboard_tablica">
+                    <li>{service.service_name}</li>
+                    <li>{service.service_duration}</li>
+                    <li>{service.service_price}</li>
+                  </div>
+                ))
+                }
               </div>
             </Link>
             <Link style={{ textDecoration: "none" }} exact to="/naplacivanje">
