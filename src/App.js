@@ -10,7 +10,7 @@ import Naplacivanje from './views/Naplacivanje'
 import Profil from './views/Profil'
 import Kalendar from './views/Kalendar'
 import Login from './views/Login'
-import NovaUsluga from './views/NovaUsluga' //forma za dodavanje nove usluge
+import NovaUsluga from './views/NoovaUsluga' //forma za dodavanje nove usluge
 
 const App = () => {
   return (
