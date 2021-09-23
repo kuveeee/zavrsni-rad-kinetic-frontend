@@ -1,5 +1,5 @@
 import React from 'react';
-import '../assets/styles/NovaUsluga.css';
+import '../assets/styles/NoovaUsluga.css';
 
 function NovaUsluga() {
     return <div className="main">
