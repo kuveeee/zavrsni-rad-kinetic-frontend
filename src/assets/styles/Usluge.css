@@ -66,7 +66,7 @@
 }
 
 .usluge_tablica {
-    width: 550px;
+    width: 600px;
     display: table;
     margin-top: 50px;
     margin-bottom: 30px;
@@ -82,8 +82,8 @@
 
 .rectangle {
     background-color: white;
-    width: 525px;
-    height: 50px;
+    width: 850px;
+    height: 100px;
     display: flex;
     justify-content: space-between;
     margin-bottom: 10px;
@@ -152,6 +152,26 @@
 .cijena p {
     display: table-cell;
     vertical-align: middle;
+    color: white;
+    opacity: 1;
+}
+
+.opis {
+    width: 320px;
+    height: 90px;
+    background: #4CC3BE 0% 0% no-repeat padding-box;
+    border-radius: 12px;
+    color: white;
+    font-size: 12px;
+    display: table;
+    margin-top: 5px;
+    padding-left: 12px;
+    margin-left: 20px;
+}
+
+.opis p {
+    display: table-cell;
+    padding-top: 10px;
     color: white;
     opacity: 1;
 }
