@@ -61,3 +61,26 @@
     transition: transform 0.3s;
     transform: scale(1.1);
 }
+
+.kreiraj_naplacivanje {
+    
+}
+
+.kreiraj_naplacivanje button {
+    width: 150px;
+    height: 45px;
+    background: #4CC3BE 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 12px;
+    margin-top: 100px;
+    border: none;
+    font-size: large;
+}
+
+.kreiraj_naplacivanje button:hover {
+    background-color: #4CC3BE;
+    transition: transform 0.3s;
+    transform: scale(1.15);
+    border: none;
+    color: white;
+}

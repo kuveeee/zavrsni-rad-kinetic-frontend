@@ -1,6 +1,33 @@
 import React, { useState } from 'react'
 import Axios from 'axios'
 import '../assets/styles/noviPacijent.css';
+import { toast } from 'react-toastify'; //notifikacije
+import 'react-toastify/dist/ReactToastify.css';//Notifications styles
+
+toast.configure()
+const notify_success = () => {
+  toast.success('🦄 Uspješno', {
+    position: "top-right",
+    autoClose: 5000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+  });
+}
+
+const notify_error = () => {
+  toast.error('🦄', {
+    position: "top-right",
+    autoClose: 5000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+  });
+}
 
 function NoviPacijent() {
   const url = "https://kinetic-db.herokuapp.com/clients"
@@ -13,19 +40,26 @@ function NoviPacijent() {
     client_email: "",
   })
   function submit(e) {
-    e.preventDefault();
-    Axios.post(url, {
-      client_first_name: data.client_first_name,
-      client_last_name: data.client_last_name,
-      client_sex: data.client_sex,
-      client_phone_number: data.client_phone_number,
-      client_birth_date: data.client_birth_date,
-      client_email: data.client_email
-    })
-      .then(res => {
-        console.log(res.data)
+    try {
+      e.preventDefault();
+      Axios.post(url, {
+        client_first_name: data.client_first_name,
+        client_last_name: data.client_last_name,
+        client_sex: data.client_sex,
+        client_phone_number: data.client_phone_number,
+        client_birth_date: data.client_birth_date,
+        client_email: data.client_email
       })
+        .then(res => {
+          console.log(res.data)
+        })
+      notify_success();
+    }
+    catch (error) {
+      notify_error();
+    }
   }
+
   function handle(e) {
     const newdata = { ...data }
     newdata[e.target.id] = e.target.value

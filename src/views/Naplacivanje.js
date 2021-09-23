@@ -54,6 +54,9 @@ function Naplacivanje() {
             <h6>Cijena</h6>
             <div class="break"></div>
             <input type="text"></input>
+            <div class="kreiraj_naplacivanje">
+              <button>Kreiraj</button>
+            </div>
         </div>
     </div>
 }

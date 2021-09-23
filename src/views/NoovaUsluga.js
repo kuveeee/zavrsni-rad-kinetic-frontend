@@ -1,6 +1,33 @@
 import React, { useState } from 'react'
 import Axios from 'axios'
 import '../assets/styles/NoovaUsluga.css';
+import { toast } from 'react-toastify'; //notifikacije
+import 'react-toastify/dist/ReactToastify.css';//Notifications styles
+
+toast.configure()
+const notify_success = () => {
+    toast.success('🦄 Uspješno', {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+    });
+}
+
+const notify_error = () => {
+    toast.error('🦄', {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+    });
+}
 
 function NovaUsluga() {
     const url = "https://kinetic-db.herokuapp.com/services"
@@ -12,17 +39,23 @@ function NovaUsluga() {
         service_price: "",
     })
     function submit(e) {
-        e.preventDefault();
-        Axios.post(url, {
-            service_id: data.service_id,
-            service_name: data.service_name,
-            service_description: data.service_description,
-            service_duration: data.service_duration,
-            service_price: data.service_price,
-        })
-            .then(res => {
-                console.log(res.data)
+        try {
+            e.preventDefault();
+            Axios.post(url, {
+                service_id: data.service_id,
+                service_name: data.service_name,
+                service_description: data.service_description,
+                service_duration: data.service_duration,
+                service_price: data.service_price,
             })
+                .then(res => {
+                    console.log(res.data)
+                })
+            notify_success();
+        }
+        catch (error) {
+            notify_error();
+        }
     }
     function handle(e) {
         const newdata = { ...data }
