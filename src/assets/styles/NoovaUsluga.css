@@ -27,7 +27,7 @@
 }
 
 .novaUsluga_body .klijent {
-    height: 380px;
+    height: 630px;
 }
 
 .input_ime input {
@@ -36,6 +36,14 @@
 
 .input_cijena input {
     width: 150px;
+}
+
+.input_opis input {
+    height: 180px;
+}
+
+.input_id input {
+    width: 50px;
 }
 
 .novaUsluga_body button {
