@@ -1,17 +1,12 @@
 import React, { useEffect } from 'react';
 import '../assets/styles/Kalendar.css';
 import { Reservations } from '../services/index';
-//import Calendar from 'react-calendar'
 import Paper from '@material-ui/core/Paper';
 import { ViewState } from '@devexpress/dx-react-scheduler';
-import {
-  Scheduler,
-  //DayView,
-  WeekView,
-  Appointments,
-} from '@devexpress/dx-react-scheduler-material-ui';
+import { Scheduler, WeekView, Appointments } from '@devexpress/dx-react-scheduler-material-ui';
 const moment = require('moment');
 const currentDate = new Date();
+
 function Kalendar() {
   const [reservationsData, setReservationsData] = React.useState([]);
 
@@ -33,6 +28,7 @@ function Kalendar() {
       title: reservation.title,
     };
   });
+
   useEffect(() => {
     getAllReservations();
 
