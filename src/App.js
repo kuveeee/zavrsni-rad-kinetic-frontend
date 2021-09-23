@@ -18,7 +18,8 @@ const App = () => {
       <Router>
         <Sidebar />
         <Switch>
-          <Route path="/" exact component={Dashboard} />
+          <Route path="/" exact component={Login} />
+          <Route path="/dashboard" component={Dashboard} />
           <Route path="/kalendar" component={Kalendar} />
           <Route path="/klijenti" component={Klijenti} />
           <Route path="/usluge" component={Usluge} />
