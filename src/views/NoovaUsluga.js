@@ -40,28 +40,28 @@ function NovaUsluga() {
                         <div class="input1">
                             <p>Ime usluge</p>
                             <div class="input_ime">
-                                <input type="text" onChange={(e) => handle(e)} value={data.service_name}></input>
+                                <input type="text" onChange={(e) => handle(e)} value={data.service_name} id="service_name"></input>
                             </div>
                             <p>Trajanje usluge</p>
-                            <input onChange={(e) => handle(e)} value={data.service_duration} type="number"></input>
+                            <input onChange={(e) => handle(e)} value={data.service_duration} type="number" id="service_duration"></input>
                             <p>Cijena usluge</p>
                             <div class="input_cijena">
-                                <input onChange={(e) => handle(e)} value={data.service_price} type="number"></input>
+                                <input onChange={(e) => handle(e)} value={data.service_price} type="number" id="service_price"></input>
                             </div>
                             <p>Opis usluge</p>
                             <div class="input_opis">
-                                <input onChange={(e) => handle(e)} value={data.service_description} type="text"></input>
+                                <input onChange={(e) => handle(e)} value={data.service_description} type="text" id="service_description"></input>
                             </div>
                             <p>ID usluge</p>
                             <div class="input_id">
-                                <input onChange={(e) => handle(e)} value={data.service_id} type="number"></input>
+                                <input onChange={(e) => handle(e)} value={data.service_id} type="number" id="service_id"></input>
                             </div>
                         </div>
-
+                        <div class="kreiraj">
+                            <button>Kreiraj</button>
+                        </div>
                     </form>
-                    <div class="kreiraj">
-                        <button>Kreiraj</button>
-                    </div>
+
                 </div>
             </div>
 

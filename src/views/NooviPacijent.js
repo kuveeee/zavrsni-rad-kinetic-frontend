@@ -50,8 +50,8 @@ function NoviPacijent() {
               <p>Spol</p>
               <select class="ui dropdown" onChange={(e) => handle(e)} id="client_sex" value={data.client_sex}>
                 <option value="">Spol</option>
-                <option value="1">Muškarac</option>
-                <option value="0">Žena</option>
+                <option value="M">Muškarac</option>
+                <option value="Ž">Žena</option>
               </select>
               <p>Broj telefona</p>
               <input type="text" onChange={(e) => handle(e)} id="client_phone_number" value={data.client_phone_number}></input>
