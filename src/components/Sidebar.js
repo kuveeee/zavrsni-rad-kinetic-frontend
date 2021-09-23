@@ -52,10 +52,10 @@ function Sidebar() {
             );
           })}
           <li className="nav-text">
-            <a style={{ cursor: 'pointer' }}>
+            <Link>
               <Icons.ExitToApp />
               <span onClick={logout}>Logout</span>
-            </a>
+            </Link>
           </li>
         </ul>
       </nav>
