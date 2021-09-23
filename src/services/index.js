@@ -22,4 +22,11 @@ let Services = {
   },
 };
 
-export { Clients, Services };
+let Reservations = {
+  async getAllReservations() {
+    let response = await Service.get('/reservations');
+    return response.data;
+  },
+};
+
+export { Clients, Services, Reservations };

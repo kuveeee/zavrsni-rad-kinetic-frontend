@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import '../assets/styles/Kalendar.css'
+import { Reservations } from '../services/index';
 //import Calendar from 'react-calendar'
 import Paper from '@material-ui/core/Paper';
 import { ViewState } from '@devexpress/dx-react-scheduler';
@@ -9,20 +10,31 @@ import {
     WeekView,
     Appointments,
 } from '@devexpress/dx-react-scheduler-material-ui';
-
-const currentDate = '2021-09-20';
-const schedulerData = [
-    { startDate: '2021-09-20T09:45', endDate: '2021-09-20T013:00', title: 'Rezervacija 1' },
-    { startDate: '2021-09-20T14:00', endDate: '2021-09-20T16:00', title: 'Rezervacija 2' },
-];
+const currentDate = new Date();
+//Prikaz rezervacija
+const schedulerData = [ 
+        { startDate: '2021-09-23T14:00', endDate: '2021-09-23T14:00', title: 'Rezervacija 2' },
+        { startDate: '2021-09-21T10:00', endDate: '2021-09-21T12:00', title: 'Title'},
+    ];
 
 function Kalendar() {
+    //Dohvat rezervacija
+    const [reservationsData, setReservationsData] = React.useState([]);
+    const getAllReservations = async () => {
+        let res = await Reservations.getAllReservations();
+        setReservationsData(res);
+    };
+    useEffect(() => {
+        getAllReservations();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
+
     return <div className="main">
         <h1>Kalendar</h1>
         {/* <Calendar start="Decade"/> */}
         <Paper>
             <Scheduler
-                data={schedulerData}
+                data={reservationsData}
             >
                 <ViewState
                     currentDate={currentDate}
@@ -30,7 +42,7 @@ function Kalendar() {
                 <WeekView
                     startDayHour={7}
                     endDayHour={16}
-                    excludedDays={[0,6]}
+                    excludedDays={[0, 6]}
                 />
                 <Appointments />
             </Scheduler>
