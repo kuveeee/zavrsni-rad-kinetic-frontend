@@ -1,5 +1,7 @@
 import React, { useEffect } from 'react';
 import '../assets/styles/Kalendar.css';
+import { Link } from 'react-router-dom';
+import plus from '../assets/images/usluge/plus.png';
 import { Reservations } from '../services/index';
 import Paper from '@material-ui/core/Paper';
 import { ViewState } from '@devexpress/dx-react-scheduler';
@@ -38,6 +40,12 @@ function Kalendar() {
   return (
     <div className="main">
       <h1>Kalendar</h1>
+      <Link style={{ textDecoration: "none" }} exact to="/nova-rezervacija">
+        <div class="nova_rezervacija">
+          <img src={plus} alt="Dodavanje usluge"></img>
+          <h3>Nova rezervacija</h3>
+        </div>
+      </Link>
       <Paper>
         <Scheduler data={newArray}>
           <ViewState currentDate={currentDate} />

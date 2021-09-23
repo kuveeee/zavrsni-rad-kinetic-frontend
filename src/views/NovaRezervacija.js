@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Axios from 'axios';
 import { Clients, Services } from '../services';
-//import { toast } from 'react-toastify'; //               Notifications
+import { toast } from 'react-toastify'; //               Notifications
 import 'react-toastify/dist/ReactToastify.css'; //       Notifications styles
 import '../assets/styles/NovaRezervacija.css'; //       asset
 // import woman from '../assets/images/woman.png'; //      asset
@@ -25,17 +25,17 @@ function NovaRezervacija() {
   //     progress: undefined,
   //   });
   // }
-  // const notify_success = () => {
-  //   toast.success('🦄', {
-  //     position: "top-right",
-  //     autoClose: 5000,
-  //     hideProgressBar: false,
-  //     closeOnClick: true,
-  //     pauseOnHover: true,
-  //     draggable: true,
-  //     progress: undefined,
-  //   });
-  // }
+  const notify_success = () => {
+    toast.success('🦄', {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
+  }
   // const notify_error = () => {
   //   toast.error('🦄', {
   //     position: "top-right",
@@ -110,6 +110,7 @@ function NovaRezervacija() {
       serviceID: data.serviceid,
       clientID: data.clientid,
     }).then((res) => {
+      notify_success()
       console.log(res.data);
     });
   }
