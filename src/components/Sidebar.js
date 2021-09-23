@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import * as Icons from '@material-ui/icons';
 import { sidebarData } from './sidebarData';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 
 import '../assets/styles/Sidebar.css';
 import profilepic from '../assets/images/profile.png';
@@ -11,6 +11,11 @@ function Sidebar() {
   const [sidebar, setSidebar] = useState(false);
 
   const toggleSidebar = () => setSidebar(!sidebar);
+
+  const logout = () => {
+    localStorage.removeItem('admin');
+    window.location = '/';
+  };
 
   return (
     <>
@@ -46,6 +51,12 @@ function Sidebar() {
               </li>
             );
           })}
+          <li className="nav-text">
+            <Link>
+              <Icons.ExitToApp />
+              <span onClick={logout}>Logout</span>
+            </Link>
+          </li>
         </ul>
       </nav>
     </>

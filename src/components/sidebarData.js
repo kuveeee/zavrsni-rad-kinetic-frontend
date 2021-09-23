@@ -3,7 +3,7 @@ import * as Icons from '@material-ui/icons';
 export const sidebarData = [
   {
     title: 'Nadzorna ploča',
-    path: '/',
+    path: '/dashboard',
     icon: <Icons.Dashboard />,
     cName: 'nav-text',
   },
@@ -40,12 +40,6 @@ export const sidebarData = [
   {
     title: 'Profil',
     path: '/profil',
-    icon: <Icons.Person />,
-    cName: 'nav-text',
-  },
-  {
-    title: 'Login',
-    path: '/login',
     icon: <Icons.Person />,
     cName: 'nav-text',
   },
