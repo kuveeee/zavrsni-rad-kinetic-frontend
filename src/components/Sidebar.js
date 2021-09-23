@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import * as Icons from '@material-ui/icons';
 import { sidebarData } from './sidebarData';
-import { Link, Redirect } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import '../assets/styles/Sidebar.css';
 import profilepic from '../assets/images/profile.png';
