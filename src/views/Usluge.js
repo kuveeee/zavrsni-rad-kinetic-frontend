@@ -11,7 +11,7 @@ function Usluge() {
   const [data, setData] = useState({
     service_id: "",
   })
-  const url = `https://kinetic-db.herokuapp.com/services/${data.service_id}`
+  const url = `https://kinetic-db.herokuapp.com/service/${data.service_id}`
   function submit(e) {
     try {
       e.preventDefault();
