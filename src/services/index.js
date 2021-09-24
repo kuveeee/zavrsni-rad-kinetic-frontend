@@ -13,9 +13,9 @@ let Clients = {
     let response = await Service.get('/clients');
     return response.data;
   },
-  async removeClient(id) {
-    let response = await Service.delete(`/clients/:${id}`);
-  },
+  // async removeClient(id) {
+  //   let response = await Service.delete(`/clients/:${id}`);
+  // },
 };
 
 let Services = {

@@ -175,3 +175,7 @@
     color: white;
     opacity: 1;
 }
+
+.rectangle button{
+    height: 30px;
+}

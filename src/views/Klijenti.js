@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import Axios from 'axios';
+// import Axios from 'axios';
 import '../assets/styles/Klijenti.css';
 import ClientSearch from '../components/clientSearch'; //komponenta za pretragu klijenata
 import plus from '../assets/images/usluge/plus.png';
@@ -24,26 +24,26 @@ toast.configure();
 function Klijenti() {
   // const url = `https://kinetic-db.herokuapp.com/clients/${client.client_id}`
   // const url = `https://kinetic-db.herokuapp.com/clients/`
-  const [data, setData] = useState({
+  const [data,] = useState({
     client_id: '',
   });
-  const url = `https://kinetic-db.herokuapp.com/clients/${data.client_id}`;
-  function submit(e) {
-    try {
-      e.preventDefault();
-      Axios.delete(url, {
-        id: data.client_id,
-      }).then((res) => {
-        console.log(res.data);
-      });
-    } catch (error) {}
-  }
-  function handle(e) {
-    const newdata = { ...data };
-    newdata[e.target.id] = e.target.value;
-    setData(newdata);
-    console.log(newdata);
-  }
+  // const url = `https://kinetic-db.herokuapp.com/clients/${data.client_id}`;
+  // function submit(e) {
+  //   try {
+  //     e.preventDefault();
+  //     Axios.delete(url, {
+  //       id: data.client_id,
+  //     }).then((res) => {
+  //       console.log(res.data);
+  //     });
+  //   } catch (error) {}
+  // }
+  // function handle(e) {
+  //   const newdata = { ...data };
+  //   newdata[e.target.id] = e.target.value;
+  //   setData(newdata);
+  //   console.log(newdata);
+  // }
 
   const removeClient = async (id) => {
     Service.delete(`/clients/${id}`, data.client_id).then((result) => {

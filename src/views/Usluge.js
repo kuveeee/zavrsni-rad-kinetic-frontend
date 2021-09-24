@@ -1,40 +1,45 @@
 import React, { useEffect, useState } from 'react';
-import Axios from 'axios'
+// import Axios from 'axios'
 import '../assets/styles/Usluge.css';
 import { Link } from 'react-router-dom';
 import plus from '../assets/images/usluge/plus.png';
-import { Services } from '../services/index';
+import { Service, Services } from '../services/index';
 // import trajanje from '../assets/images/usluge/trajanje.png';
 // import cijena from '../assets/images/usluge/cijena.png';
 
 function Usluge() {
-  const [data, setData] = useState({
-    service_id: "",
-  })
-  const url = `https://kinetic-db.herokuapp.com/service/${data.service_id}`
-  function submit(e) {
-    try {
-      e.preventDefault();
-      Axios.delete(url, {
-        id: data.service_id,
-      })
-        .then(res => {
-          console.log(res.data)
-        })
-    }
-    catch (error) {
-    }
-  }
-  function handle(e) {
-    const newdata = { ...data }
-    newdata[e.target.id] = e.target.value
-    setData(newdata)
-    console.log(newdata)
-  }
+  const [data,] = useState({
+    service_id: '',
+  });
+  // const url = `https://kinetic-db.herokuapp.com/service/${data.service_id}`
+  // function submit(e) {
+  //   try {
+  //     e.preventDefault();
+  //     Axios.delete(url, {
+  //       id: data.service_id,
+  //     })
+  //       .then(res => {
+  //         console.log(res.data)
+  //       })
+  //   }
+  //   catch (error) {
+  //   }
+  // }
+  // function handle(e) {
+  //   const newdata = { ...data }
+  //   newdata[e.target.id] = e.target.value
+  //   setData(newdata)
+  //   console.log(newdata)
+  // }
+
+  const removeService = async (id) => {
+    Service.delete(`/service/${id}`, data.service_id).then((result) => {
+      console.log(result, 'deleted');
+    });
+  };
 
   //dohvat usluga
   const [services, setServices] = React.useState([]);
-
   const getServices = async () => {
     let res = await Services.getAllServices();
     setServices(res);
@@ -44,6 +49,7 @@ function Usluge() {
     getServices();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
   return <div>
     <div className="main">
       <div class="flex_row">
@@ -90,18 +96,18 @@ function Usluge() {
                         <p>{service.service_description}</p>
                       </div>
                     </div>
+                    <button onClick={() => removeService(service.service_id)}>Delete</button>
                   </div>
+                  
                 </div>
               ))
               }
             </div>
             <div class="break"></div>
-            <div class="brisanje">
+            {/* <div class="brisanje">
               <p>Brisanje</p>
-              <form onSubmit={(e) => submit(e)}>
-                <input onChange={(e) => handle(e)} placeholder="ID usluge" type="number" value={data.service_id} id="service_id"></input>
-              </form>
-            </div>
+              <button onClick={() => removeService(service.service_id)}>Delete</button>
+            </div> */}
           </div>
         </div>
       </div>
