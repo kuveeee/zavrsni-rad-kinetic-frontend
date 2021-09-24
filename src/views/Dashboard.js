@@ -5,7 +5,7 @@ import new_reservation from '../assets/images/new_reservation.png';
 import finantion_chart from '../assets/images/finantion_chart.png';
 import clients_chart from '../assets/images/clients_chart.png';
 import appointment from '../assets/images/appointment.png';
-import { Services } from '../services/index';
+import { Services, Reservations } from '../services/index'; //import funkcija za dohvacanje usluga i rezervacija
 import Paper from '@material-ui/core/Paper'; //vizualni dio za kalendar
 import { ViewState } from '@devexpress/dx-react-scheduler';
 import {
@@ -14,16 +14,42 @@ import {
   //WeekView,
   Appointments,
 } from '@devexpress/dx-react-scheduler-material-ui';
-const currentDate = '2021-08-29';
-
+const currentDate = new Date();
+const moment = require('moment');
 const schedulerData = [
   { startDate: '2021-08-30T09:45', endDate: '2021-08-30T010:45', title: 'Rezervacija 1' },
   { startDate: '2021-08-30T14:00', endDate: '2021-08-30T16:00', title: 'Rezervacija 2' },
 ];
 
 function Dashboard() {
-  const [services, setServices] = React.useState([]);
+  const [reservationsData, setReservationsData] = React.useState([]);
 
+  const getAllReservations = async () => {
+    let res = await Reservations.getAllReservations();
+    setReservationsData(res);
+  };
+
+  const newArray = reservationsData.map((reservation) => {
+    let startDateTimestamp = reservation.startdate;
+    let formattedStartDate = moment.unix(startDateTimestamp).format();
+
+    let endDateTimestamp = reservation.enddate;
+    let formattedEndDate = moment.unix(endDateTimestamp).format();
+
+    return {
+      startDate: formattedStartDate,
+      endDate: formattedEndDate,
+      title: reservation.title,
+    };
+  });
+
+  useEffect(() => {
+    getAllReservations();
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+  //Dohvat Usluga
+  const [services, setServices] = React.useState([]);
   const getServices = async () => {
     let res = await Services.getAllServices();
     setServices(res);
@@ -95,7 +121,7 @@ function Dashboard() {
                 </div>
               </Link>
               <Paper>
-                <Scheduler data={schedulerData}>
+                <Scheduler data={newArray}>
                   <ViewState currentDate={currentDate} />
                   <DayView
                     startDayHour={7}
