@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react';
-import Axios from 'axios'
+import Axios from 'axios';
 import '../assets/styles/Klijenti.css';
 import ClientSearch from '../components/clientSearch'; //komponenta za pretragu klijenata
 import plus from '../assets/images/usluge/plus.png';
 import { toast } from 'react-toastify'; //notifikacije
-import 'react-toastify/dist/ReactToastify.css';//Notifications styles
+import 'react-toastify/dist/ReactToastify.css'; //Notifications styles
 import { Link } from 'react-router-dom';
-import { Clients } from '../services/index';
+import { Clients, Service } from '../services/index';
 
-toast.configure()
+toast.configure();
 // const notify_success = () => {
 //   toast.success('🦄 Uspješno', {
 //     position: "top-right",
@@ -25,34 +25,31 @@ function Klijenti() {
   // const url = `https://kinetic-db.herokuapp.com/clients/${client.client_id}`
   // const url = `https://kinetic-db.herokuapp.com/clients/`
   const [data, setData] = useState({
-    client_id: "",
-  })
-  const url = `https://kinetic-db.herokuapp.com/clients/${data.client_id}`
+    client_id: '',
+  });
+  const url = `https://kinetic-db.herokuapp.com/clients/${data.client_id}`;
   function submit(e) {
     try {
       e.preventDefault();
       Axios.delete(url, {
         id: data.client_id,
-      })
-        .then(res => {
-          console.log(res.data)
-        })
-    }
-    catch (error) {
-    }
+      }).then((res) => {
+        console.log(res.data);
+      });
+    } catch (error) {}
   }
   function handle(e) {
-    const newdata = { ...data }
-    newdata[e.target.id] = e.target.value
-    setData(newdata)
-    console.log(newdata)
+    const newdata = { ...data };
+    newdata[e.target.id] = e.target.value;
+    setData(newdata);
+    console.log(newdata);
   }
 
-  // const removeClient = async () => {
-  //   let res = await Clients.removeClient();
-  //   setClients(res);
-  //   console.log(data.client_id);
-  // };
+  const removeClient = async (id) => {
+    Service.delete(`/clients/${id}`, data.client_id).then((result) => {
+      console.log(result, 'deleted');
+    });
+  };
 
   //Dohvat klijenata
   const [clients, setClients] = React.useState([]);
@@ -100,16 +97,13 @@ function Klijenti() {
               <li>{client.client_email}</li>
               <li>{client.client_birth_date}</li>
               <li>{client.client_sex}</li>
+              <button onClick={() => removeClient(client.client_id)}>Delete</button>
             </div>
           ))}
         </div>
-        <form onSubmit={(e) => submit(e)}>
-          <input onChange={(e) => handle(e)} placeholder="ID korisnika" type="number" value={data.client_id} id="client_id"></input>
-        </form>
       </div>
     </div>
   );
 }
 
 export default Klijenti;
-
