@@ -106,6 +106,14 @@
     transform: scale(1.05);
 }
 
+.klijent_box button {
+    width: 70px;
+    height: 30px;
+    border-radius: 5px;
+    margin-left: 30px;
+    margin-bottom: 10px;
+}
+
 .brisanje input {
     width: 150px;
     height: 50px;
@@ -118,6 +126,6 @@
     padding-left: 17px;
 }
 
-.brisanje p{
+.brisanje p {
     font-size: 18px;
 }
