@@ -4,12 +4,12 @@
     width: 400px;
   } */
 
-.MuiPaper-root{
+.MuiPaper-root {
   width: 1400px;
   height: 600px;
 }
 
-.nova_rezervacija {
+.nova_rezervacija_button {
   background: #FFFFFF 0% 0% no-repeat padding-box;
   box-shadow: 0px 5px 15px #0000001A;
   border-radius: 27px;
@@ -21,9 +21,11 @@
   padding-left: 20px;
   padding-right: 20px;
   margin-bottom: 20px;
+  margin-top: 30px;
+  margin-left: 900px;
 }
 
-.nova_rezervacija img {
+.nova_rezervacija_button img {
   width: 25px;
   height: 25px;
   position: absolute;
@@ -32,7 +34,7 @@
   margin: auto;
 }
 
-.nova_rezervacija h3 {
+.nova_rezervacija_button h3 {
   letter-spacing: 0px;
   color: #43425D;
   font-size: 20px;
@@ -42,7 +44,7 @@
   padding-left: 20px;
 }
 
-.nova_rezervacija:hover {
+.nova_rezervacija_button:hover {
   background-color: #4CC3BE30;
   transition: transform 0.3s;
   transform: scale(1.1);

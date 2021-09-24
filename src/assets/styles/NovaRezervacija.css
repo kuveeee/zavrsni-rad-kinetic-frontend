@@ -132,8 +132,9 @@ h2 {
     background-color: #d4d4d4;
     width: 200px;
     height: 60px;
-    border-radius: 5px;
+    border-radius: 10px;
     border: none;
+    margin-bottom: 20px;
 }
 
 .odabir_usluga select:hover {
@@ -149,13 +150,13 @@ h2 {
     margin-left: 100px;
 }
 
-.odabir_dijagnoze h2 {
+/* .odabir_dijagnoze h2 {
     font-size: 20px;
     margin-top: 50px;
     margin-bottom: 18px;
-}
+} */
 
-.odabir_dijagnoze input{
+.odabir_dijagnoze input {
     height: 90px;
     width: 500px;
     border-radius: 5px;
@@ -166,17 +167,25 @@ h2 {
 }
 
 .odabir_termina {
-    margin-top: 50px;
     margin-left: 100px;
 }
 
 .odabir_termina h2 {
-    margin-top: 25px !important;
     font-size: 20px;
 }
 
-.odabir_termina input{
+.odabir_termina input {
     margin-bottom: 40px;
+    font-size: 18px;
+    width: 300px;
+    height: 30px;
+    border-radius: 10px;
+    padding-left: 20px;
+}
+
+.odabir_termina input:hover {
+    transition: transform 0.3s;
+    transform: scale(1.15);
 }
 
 .react-datetime-picker__inputGroup__divider {
@@ -201,7 +210,6 @@ h2 {
     background: #4CC3BE 0% 0% no-repeat padding-box;
     box-shadow: 0px 3px 6px #00000029;
     border-radius: 12px;
-    margin-top: 50px;
     border: none;
     font-size: large;
 }
@@ -214,6 +222,6 @@ h2 {
     color: white;
 }
 
-.grayed_out{
+.grayed_out {
     opacity: 0.25;
 }

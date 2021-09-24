@@ -4,6 +4,7 @@ import '../assets/styles/Dashboard.css';
 import new_reservation from '../assets/images/new_reservation.png';
 import finantion_chart from '../assets/images/finantion_chart.png';
 import clients_chart from '../assets/images/clients_chart.png';
+import appointment from '../assets/images/appointment.png';
 import { Services } from '../services/index';
 import Paper from '@material-ui/core/Paper'; //vizualni dio za kalendar
 import { ViewState } from '@devexpress/dx-react-scheduler';
@@ -45,6 +46,7 @@ function Dashboard() {
               <Link style={{ textDecoration: 'none' }} exact to="/Kalendar">
                 <div class="kalendar">
                   <p>Kalendar</p>
+                  <img src={appointment} alt="Slika kalendara"></img>
                 </div>
               </Link>
               <Link style={{ textDecoration: 'none' }} exact to="/Nova-Rezervacija">

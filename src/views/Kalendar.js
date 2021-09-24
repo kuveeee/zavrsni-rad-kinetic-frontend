@@ -39,13 +39,15 @@ function Kalendar() {
 
   return (
     <div className="main">
-      <h1>Kalendar</h1>
-      <Link style={{ textDecoration: "none" }} exact to="/nova-rezervacija">
-        <div class="nova_rezervacija">
-          <img src={plus} alt="Dodavanje usluge"></img>
-          <h3>Nova rezervacija</h3>
-        </div>
-      </Link>
+      <div class="flex_row">
+          <h1>Kalendar</h1>
+          <Link style={{ textDecoration: "none" }} exact to="/nova-rezervacija">
+            <div class="nova_rezervacija_button">
+              <img src={plus} alt="Dodavanje usluge"></img>
+              <h3>Nova rezervacija</h3>
+            </div>
+          </Link>
+      </div>
       <Paper>
         <Scheduler data={newArray}>
           <ViewState currentDate={currentDate} />
