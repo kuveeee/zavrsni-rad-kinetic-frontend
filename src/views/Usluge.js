@@ -1,4 +1,5 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
+import Axios from 'axios'
 import '../assets/styles/Usluge.css';
 import { Link } from 'react-router-dom';
 import plus from '../assets/images/usluge/plus.png';
@@ -7,6 +8,31 @@ import { Services } from '../services/index';
 // import cijena from '../assets/images/usluge/cijena.png';
 
 function Usluge() {
+  const [data, setData] = useState({
+    service_id: "",
+  })
+  const url = `https://kinetic-db.herokuapp.com/services/${data.service_id}`
+  function submit(e) {
+    try {
+      e.preventDefault();
+      Axios.delete(url, {
+        id: data.service_id,
+      })
+        .then(res => {
+          console.log(res.data)
+        })
+    }
+    catch (error) {
+    }
+  }
+  function handle(e) {
+    const newdata = { ...data }
+    newdata[e.target.id] = e.target.value
+    setData(newdata)
+    console.log(newdata)
+  }
+
+  //dohvat usluga
   const [services, setServices] = React.useState([]);
 
   const getServices = async () => {
@@ -68,6 +94,13 @@ function Usluge() {
                 </div>
               ))
               }
+            </div>
+            <div class="break"></div>
+            <div class="brisanje">
+              <p>Brisanje</p>
+              <form onSubmit={(e) => submit(e)}>
+                <input onChange={(e) => handle(e)} placeholder="ID usluge" type="number" value={data.service_id} id="service_id"></input>
+              </form>
             </div>
           </div>
         </div>
