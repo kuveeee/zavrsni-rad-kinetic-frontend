@@ -1,13 +1,61 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
+import Axios from 'axios'
 import '../assets/styles/Klijenti.css';
 import ClientSearch from '../components/clientSearch'; //komponenta za pretragu klijenata
 import plus from '../assets/images/usluge/plus.png';
+import { toast } from 'react-toastify'; //notifikacije
+import 'react-toastify/dist/ReactToastify.css';//Notifications styles
 import { Link } from 'react-router-dom';
 import { Clients } from '../services/index';
 
-function Klijenti() {
-  const [clients, setClients] = React.useState([]);
+toast.configure()
+// const notify_success = () => {
+//   toast.success('🦄 Uspješno', {
+//     position: "top-right",
+//     autoClose: 5000,
+//     hideProgressBar: false,
+//     closeOnClick: true,
+//     pauseOnHover: true,
+//     draggable: true,
+//     progress: undefined,
+//   });
+// }
 
+function Klijenti() {
+  // const url = `https://kinetic-db.herokuapp.com/clients/${client.client_id}`
+  // const url = `https://kinetic-db.herokuapp.com/clients/`
+  const [data, setData] = useState({
+    client_id: "",
+  })
+  const url = `https://kinetic-db.herokuapp.com/clients/${data.client_id}`
+  function submit(e) {
+    try {
+      e.preventDefault();
+      Axios.delete(url, {
+        id: data.client_id,
+      })
+        .then(res => {
+          console.log(res.data)
+        })
+    }
+    catch (error) {
+    }
+  }
+  function handle(e) {
+    const newdata = { ...data }
+    newdata[e.target.id] = e.target.value
+    setData(newdata)
+    console.log(newdata)
+  }
+
+  // const removeClient = async () => {
+  //   let res = await Clients.removeClient();
+  //   setClients(res);
+  //   console.log(data.client_id);
+  // };
+
+  //Dohvat klijenata
+  const [clients, setClients] = React.useState([]);
   const getClients = async () => {
     let res = await Clients.getAllClients();
     setClients(res);
@@ -42,6 +90,7 @@ function Klijenti() {
             <li>DATUM ROĐENJA</li>
             <li>SPOL</li>
           </div>
+
           {clients.map((client) => (
             <div className="klijent_box">
               <li>
@@ -54,9 +103,13 @@ function Klijenti() {
             </div>
           ))}
         </div>
+        <form onSubmit={(e) => submit(e)}>
+          <input onChange={(e) => handle(e)} placeholder="ID korisnika" type="number" value={data.client_id} id="client_id"></input>
+        </form>
       </div>
     </div>
   );
 }
 
 export default Klijenti;
+

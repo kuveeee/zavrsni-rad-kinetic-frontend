@@ -13,6 +13,10 @@ let Clients = {
     let response = await Service.get('/clients');
     return response.data;
   },
+  async removeClient() {
+    let response = await Service.post('/clients/:id');
+    return response.data;
+  }
 };
 
 let Services = {
@@ -30,3 +34,4 @@ let Reservations = {
 };
 
 export { Clients, Services, Reservations };
+
