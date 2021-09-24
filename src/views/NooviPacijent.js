@@ -52,8 +52,8 @@ function NoviPacijent() {
       })
         .then(res => {
           console.log(res.data)
+          notify_success();
         })
-      notify_success();
     }
     catch (error) {
       notify_error();
