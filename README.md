@@ -8,7 +8,7 @@ Sveučilište Jurja Dobrile u Puli, Fakultet informatike
 ### Uvod
 Ideja za platformu Physio je osnovana od strane Kinetic Centra u Puli a namijenjena je medicinskom osoblju koje želi samostalno voditi rezervacije termina sa svojim pacijentima, pratiti njihov napredak, tj. imati potpunu kontrolu nad svojim poslovanjem na jednom mjestu.
 
-### Frontend napravljen sa [React framework](https://reactjs.org/).
+### Frontend napravljen sa [React](https://reactjs.org/).
 
 ### Pokretanje projekta
 #### `npm start`
