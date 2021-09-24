@@ -103,9 +103,12 @@ function Klijenti() {
             </div>
           ))}
         </div>
-        <form onSubmit={(e) => submit(e)}>
-          <input onChange={(e) => handle(e)} placeholder="ID korisnika" type="number" value={data.client_id} id="client_id"></input>
-        </form>
+        <div class="brisanje">
+          <p>Brisanje</p>
+          <form onSubmit={(e) => submit(e)}>
+            <input onChange={(e) => handle(e)} placeholder="ID korisnika" type="number" value={data.client_id} id="client_id"></input>
+          </form>
+        </div>
       </div>
     </div>
   );
