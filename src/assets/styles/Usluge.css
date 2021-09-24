@@ -66,7 +66,7 @@
 }
 
 .usluge_tablica {
-    width: 600px;
+    width: 625px;
     display: table;
     margin-top: 50px;
     margin-bottom: 30px;
@@ -176,10 +176,15 @@
     opacity: 1;
 }
 
-.rectangle button{
+.rectangle button {
     margin-top: 40px;
     width: 70px;
     height: 30px;
     border-radius: 5px;
     margin-left: 10px;
+}
+
+.rectangle button:hover {
+    transition: transform 0.3s;
+    transform: scale(1.2);
 }

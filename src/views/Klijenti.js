@@ -3,12 +3,12 @@ import React, { useEffect, useState } from 'react';
 import '../assets/styles/Klijenti.css';
 import ClientSearch from '../components/clientSearch'; //komponenta za pretragu klijenata
 import plus from '../assets/images/usluge/plus.png';
-import { toast } from 'react-toastify'; //notifikacije
+// import { toast } from 'react-toastify'; //notifikacije
 import 'react-toastify/dist/ReactToastify.css'; //Notifications styles
 import { Link } from 'react-router-dom';
 import { Clients, Service } from '../services/index';
 
-toast.configure();
+// toast.configure();
 // const notify_success = () => {
 //   toast.success('🦄 Uspješno', {
 //     position: "top-right",
@@ -47,7 +47,7 @@ function Klijenti() {
 
   const removeClient = async (id) => {
     Service.delete(`/clients/${id}`, data.client_id).then((result) => {
-      console.log(result, 'deleted');
+      console.log(result, 'deleted');   
     });
   };
 
