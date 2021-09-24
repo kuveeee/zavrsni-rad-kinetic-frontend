@@ -27,7 +27,7 @@ function NovaRezervacija() {
   // }
   const notify_success = () => {
     toast.success('🦄', {
-      position: "top-right",
+      position: 'top-right',
       autoClose: 5000,
       hideProgressBar: false,
       closeOnClick: true,
@@ -35,7 +35,7 @@ function NovaRezervacija() {
       draggable: true,
       progress: undefined,
     });
-  }
+  };
   // const notify_error = () => {
   //   toast.error('🦄', {
   //     position: "top-right",
@@ -101,8 +101,17 @@ function NovaRezervacija() {
   function submit(e) {
     e.preventDefault();
     let startDateUnix = moment(data.startdate).unix();
-    console.log(startDateUnix);
-    let endDateUnix = moment(data.enddate).unix();
+    // let endDateUnix;
+    // endDateUnix += data.enddate * 60;
+    // console.log(endDateUnix);
+
+    const secs = data.enddate * 60;
+
+    const formatted = moment.utc(secs * 1000).format();
+    const endDate = moment(formatted).unix();
+    const endDateUnix = moment(startDateUnix) + endDate;
+    // console.log(endDateUnix);
+
     Axios.post(url, {
       startDate: startDateUnix,
       endDate: endDateUnix,
@@ -110,7 +119,7 @@ function NovaRezervacija() {
       serviceID: data.serviceid,
       clientID: data.clientid,
     }).then((res) => {
-      notify_success()
+      notify_success();
       console.log(res.data);
     });
   }
@@ -118,7 +127,6 @@ function NovaRezervacija() {
     const newdata = { ...data };
     newdata[e.target.id] = e.target.value;
     setData(newdata);
-    console.log(newdata);
   }
   return (
     <div className="main">
@@ -136,13 +144,14 @@ function NovaRezervacija() {
                   value={data.startdate}
                   type="datetime-local"
                 ></input>
-                <h2>Odaberite krajnji datum i vrijeme rezervacije</h2>
-                <input
-                  onChange={(e) => handle(e)}
-                  id="enddate"
-                  value={data.enddate}
-                  type="datetime-local"
-                ></input>
+                <div class="odabir_usluga">
+                  <h2>Trajanje</h2>
+                  <select onChange={(e) => handle(e)} id="enddate" value={data.enddate}>
+                    <option>Odaberite trajanje</option>
+                    <option value={30}>30min</option>
+                    <option value={60}>60min</option>
+                  </select>
+                </div>
                 <h2>Upišite naziv rezervacije</h2>
                 <input onChange={(e) => handle(e)} id="title" value={data.title} type="text"></input>
                 <div class="odabir_usluga">
