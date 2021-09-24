@@ -16,10 +16,6 @@ import {
 } from '@devexpress/dx-react-scheduler-material-ui';
 const currentDate = new Date();
 const moment = require('moment');
-const schedulerData = [
-  { startDate: '2021-08-30T09:45', endDate: '2021-08-30T010:45', title: 'Rezervacija 1' },
-  { startDate: '2021-08-30T14:00', endDate: '2021-08-30T16:00', title: 'Rezervacija 2' },
-];
 
 function Dashboard() {
   const [reservationsData, setReservationsData] = React.useState([]);
