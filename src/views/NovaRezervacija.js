@@ -165,6 +165,8 @@ function NovaRezervacija() {
                     value={data.serviceid}
                     class="ui_dropdown"
                   >
+                    <option>Odaberite uslugu</option>
+
                     {services.map((service) => (
                       <option value={service.service_id}>{service.service_name}</option>
                     ))}
@@ -175,6 +177,7 @@ function NovaRezervacija() {
                   <h2>Odabir klijenta</h2>
 
                   <select onChange={(e) => handle(e)} id="clientid" value={data.clientid} class="ui_dropdown">
+                    <option>Odaberite klijenta</option>
                     {clients.map((client) => (
                       <option value={client.client_id}>
                         {client.client_first_name + ' ' + client.client_last_name}
