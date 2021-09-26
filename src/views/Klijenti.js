@@ -3,12 +3,11 @@ import React, { useEffect, useState } from 'react';
 import '../assets/styles/Klijenti.css';
 import ClientSearch from '../components/clientSearch'; //komponenta za pretragu klijenata
 import plus from '../assets/images/usluge/plus.png';
-// import { toast } from 'react-toastify'; //notifikacije
+import { toast } from 'react-toastify'; //notifikacije
 import 'react-toastify/dist/ReactToastify.css'; //Notifications styles
 import { Link } from 'react-router-dom';
 import { Clients, Service } from '../services/index';
 
-// toast.configure();
 // const notify_success = () => {
 //   toast.success('🦄 Uspješno', {
 //     position: "top-right",
@@ -20,10 +19,20 @@ import { Clients, Service } from '../services/index';
 //     progress: undefined,
 //   });
 // }
-
+//Notifikacije
 function Klijenti() {
-  // const url = `https://kinetic-db.herokuapp.com/clients/${client.client_id}`
-  // const url = `https://kinetic-db.herokuapp.com/clients/`
+  const notify_info = () => {
+    toast.info('Pacijent je uspješno obrisan', {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
+  }
+
   const [data,] = useState({
     client_id: '',
   });
@@ -48,6 +57,7 @@ function Klijenti() {
   const removeClient = async (id) => {
     Service.delete(`/clients/${id}`, data.client_id).then((result) => {
       console.log(result, 'deleted');   
+      notify_info();
     });
   };
 

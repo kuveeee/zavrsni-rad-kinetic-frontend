@@ -91,10 +91,25 @@
     padding-right: 10px;
 }
 
+.rectangle:hover {
+    background-color: #4CC3BE30;
+    transition: transform 0.3s;
+    transform: scale(1.05);
+}
+
+.rectangle button {
+    display: none;
+}
+
 .rectangle p {
     font-size: 15px;
     color: #43425D;
     opacity: 0.75;
+}
+
+.rectangle:hover>button {
+    margin-left: 10px;
+    display: contents;
 }
 
 .usluga {
@@ -108,6 +123,7 @@
     margin-right: 40px;
     margin-top: 5px;
     padding-left: 12px;
+    vertical-align: middle;
 }
 
 .usluga p {

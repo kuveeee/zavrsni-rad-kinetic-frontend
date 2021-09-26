@@ -135,6 +135,8 @@ function NovaRezervacija() {
         <div class="novaRezervacija_body">
           <h1>Nova rezervacija</h1>
           <div class="break"></div>
+          <h6>Potrebno je ispuniti sva polja</h6>
+          <div class="break"></div>
           <div class="flex_column">
             <form onSubmit={(e) => submit(e)}>
               <div class="odabir_termina">

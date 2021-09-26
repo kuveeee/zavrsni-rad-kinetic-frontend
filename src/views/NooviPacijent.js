@@ -71,6 +71,8 @@ function NoviPacijent() {
       <div class="flex_row">
         <h1>Novi pacijent</h1>
         <div class="break"></div>
+        <h6>Potrebno je ispuniti sva polja</h6>
+        <div class="break"></div>
         <div class="klijent">
           <form onSubmit={(e) => submit(e)}>
             {/* <img class="woman" src={woman} alt="woman"></img> */}
