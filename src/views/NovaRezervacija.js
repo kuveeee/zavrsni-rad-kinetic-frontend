@@ -126,6 +126,7 @@ function NovaRezervacija() {
   function handle(e) {
     const newdata = { ...data };
     newdata[e.target.id] = e.target.value;
+    console.log(newdata);
     setData(newdata);
   }
   return (
@@ -148,11 +149,12 @@ function NovaRezervacija() {
                   <h2>Trajanje</h2>
                   <select onChange={(e) => handle(e)} id="enddate" value={data.enddate}>
                     <option>Odaberite trajanje</option>
-                    <option value={30}>30min</option>
-                    <option value={60}>60min</option>
+                    <option value={30}>30 minutes</option>
+                    <option value={60}>1 hour</option>
+                    <option value={120}>2 hours</option>
                   </select>
                 </div>
-                <h2>Upišite naziv rezervacije</h2>
+                <h2>Upišite naziv rezervacije </h2>
                 <input onChange={(e) => handle(e)} id="title" value={data.title} type="text"></input>
                 <div class="odabir_usluga">
                   <h2>Odabir usluge</h2>
