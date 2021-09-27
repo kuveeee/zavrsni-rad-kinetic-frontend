@@ -49,7 +49,6 @@ function Usluge() {
 
   const removeService = async (id) => {
     Service.delete(`/service/${id}`, data.service_id).then((result) => {
-      console.log(result, 'deleted');
       notify_info();
     });
   };

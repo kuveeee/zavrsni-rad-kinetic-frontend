@@ -56,7 +56,6 @@ function Klijenti() {
 
   const removeClient = async (id) => {
     Service.delete(`/clients/${id}`, data.client_id).then((result) => {
-      console.log(result, 'deleted');   
       notify_info();
     });
   };
