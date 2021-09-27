@@ -45,6 +45,14 @@ function Klijenti() {
     );
   };
 
+  //Uređivanje podataka klijenta
+  const updateClientInfo = async (id) => {
+    Service.put(`/clients/${id}`, data.client_id).then((result) => {
+      notify_info();
+    });
+  };
+
+  //Brisanje klijenta
   const removeClient = async (id) => {
     Service.delete(`/clients/${id}`, data.client_id).then((result) => {
       notify_info();
@@ -110,6 +118,11 @@ function Klijenti() {
               <li>{client.client_birth_date}</li>
               <li>{client.client_sex}</li>
               <button onClick={() => removeClient(client.client_id)}>Delete</button>
+              <button class="button_update" onClick={() => updateClientInfo(client.client_id)}>Uredi</button>
+              <div id="client_update">
+                <input type="text"></input>
+                <input type="text"></input>
+              </div>
             </div>
           ))}
         </div>
