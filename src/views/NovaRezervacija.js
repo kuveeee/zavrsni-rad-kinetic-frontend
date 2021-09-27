@@ -26,7 +26,7 @@ function NovaRezervacija() {
   //   });
   // }
   const notify_success = () => {
-    toast.success('🦄', {
+    toast.success('Uspješno', {
       position: 'top-right',
       autoClose: 5000,
       hideProgressBar: false,
@@ -36,17 +36,17 @@ function NovaRezervacija() {
       progress: undefined,
     });
   };
-  // const notify_error = () => {
-  //   toast.error('🦄', {
-  //     position: "top-right",
-  //     autoClose: 5000,
-  //     hideProgressBar: false,
-  //     closeOnClick: true,
-  //     pauseOnHover: true,
-  //     draggable: true,
-  //     progress: undefined,
-  //   });
-  // }
+  const notify_error = () => {
+    toast.error('Greška', {
+      position: 'top-right',
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
+  };
   // const notify_info = () => {
   //   toast.info('🦄', {
   //     position: "top-right",
@@ -98,30 +98,36 @@ function NovaRezervacija() {
     clientid: '',
   });
 
-  function submit(e) {
-    e.preventDefault();
-    let startDateUnix = moment(data.startdate).unix();
-    // let endDateUnix;
-    // endDateUnix += data.enddate * 60;
-    // console.log(endDateUnix);
+  async function submit(e) {
+    try {
+      e.preventDefault();
+      let startDateUnix = moment(data.startdate).unix();
+      // let endDateUnix;
+      // endDateUnix += data.enddate * 60;
+      // console.log(endDateUnix);
 
-    const secs = data.enddate * 60;
+      const secs = data.enddate * 60;
 
-    const formatted = moment.utc(secs * 1000).format();
-    const endDate = moment(formatted).unix();
-    const endDateUnix = moment(startDateUnix) + endDate;
-    // console.log(endDateUnix);
+      const formatted = moment.utc(secs * 1000).format();
+      const endDate = moment(formatted).unix();
+      const endDateUnix = moment(startDateUnix) + endDate;
+      // console.log(endDateUnix);
 
-    Axios.post(url, {
-      startDate: startDateUnix,
-      endDate: endDateUnix,
-      title: data.title,
-      serviceID: data.serviceid,
-      clientID: data.clientid,
-    }).then((res) => {
-      notify_success();
-      console.log(res.data);
-    });
+      await Axios.post(url, {
+        startDate: startDateUnix,
+        endDate: endDateUnix,
+        title: data.title,
+        serviceID: data.serviceid,
+        clientID: data.clientid,
+      }).then((res) => {
+        notify_success();
+        console.log(res.data);
+      });
+    }
+    catch (e) {
+      console.error("Greška!")
+      notify_error();
+    }
   }
   function handle(e) {
     const newdata = { ...data };

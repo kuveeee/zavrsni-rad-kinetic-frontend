@@ -6,7 +6,7 @@ import 'react-toastify/dist/ReactToastify.css';//Notifications styles
 
 toast.configure()
 const notify_success = () => {
-    toast.success('🦄 Uspješno', {
+    toast.success('Uspješno', {
         position: "top-right",
         autoClose: 5000,
         hideProgressBar: false,
@@ -18,7 +18,7 @@ const notify_success = () => {
 }
 
 const notify_error = () => {
-    toast.error('Usluga je uspješno kreirana', {
+    toast.error('Greška', {
         position: "top-right",
         autoClose: 5000,
         hideProgressBar: false,
@@ -38,10 +38,10 @@ function NovaUsluga() {
         service_duration: "",
         service_price: "",
     })
-    function submit(e) {
+    async function submit(e) {
         try {
             e.preventDefault();
-            Axios.post(url, {
+            await Axios.post(url, {
                 service_id: data.service_id,
                 service_name: data.service_name,
                 service_description: data.service_description,
@@ -53,7 +53,7 @@ function NovaUsluga() {
                     notify_success();
                 })
         }
-        catch (error) {
+        catch (e) {
             notify_error();
         }
     }

@@ -6,7 +6,7 @@ import 'react-toastify/dist/ReactToastify.css';//Notifications styles
 
 toast.configure()
 const notify_success = () => {
-  toast.success('🦄 Uspješno', {
+  toast.success('Uspješno', {
     position: "top-right",
     autoClose: 5000,
     hideProgressBar: false,
@@ -18,7 +18,7 @@ const notify_success = () => {
 }
 
 const notify_error = () => {
-  toast.error('🦄', {
+  toast.error('Greška', {
     position: "top-right",
     autoClose: 5000,
     hideProgressBar: false,
@@ -39,10 +39,10 @@ function NoviPacijent() {
     client_birth_date: "",
     client_email: "",
   })
-  function submit(e) {
+  async function submit(e) {
     try {
       e.preventDefault();
-      Axios.post(url, {
+      await Axios.post(url, {
         client_first_name: data.client_first_name,
         client_last_name: data.client_last_name,
         client_sex: data.client_sex,

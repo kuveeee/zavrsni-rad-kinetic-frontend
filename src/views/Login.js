@@ -8,7 +8,7 @@ import 'react-toastify/dist/ReactToastify.css'; //Notifications styles
 
 toast.configure();
 const notify_success = () => {
-  toast.success('🦄 Uspješno', {
+  toast.success('Uspješno', {
     position: 'top-right',
     autoClose: 5000,
     hideProgressBar: false,
@@ -20,7 +20,7 @@ const notify_success = () => {
 };
 
 const notify_error = () => {
-  toast.error('🦄', {
+  toast.error('Greška', {
     position: 'top-right',
     autoClose: 5000,
     hideProgressBar: false,
@@ -37,10 +37,10 @@ function Login() {
     admin_email: '',
     admin_password: '',
   });
-  function submit(e) {
+  async function submit(e) {
     try {
       e.preventDefault();
-      Axios.post(url, {
+      await Axios.post(url, {
         email: data.email,
         password: data.password,
       }).then((res) => {
@@ -49,7 +49,7 @@ function Login() {
         notify_success();
         window.location = '/dashboard';
       });
-    } catch {
+    } catch (e) {
       notify_error();
     }
   }
