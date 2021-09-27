@@ -11,8 +11,19 @@ import 'react-toastify/dist/ReactToastify.css'; //       Notifications styles
 
 function Usluge() {
   //Notifications
-  const notify_info = () => {
-    toast.info('Usluga je uspješno obrisana', {
+  const notify_success = () => {
+    toast.success('Uspješno', {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
+  }
+  const notify_error = () => {
+    toast.error('Greška', {
       position: "top-right",
       autoClose: 5000,
       hideProgressBar: false,
@@ -47,10 +58,16 @@ function Usluge() {
   //   console.log(newdata)
   // }
 
+  //Brisanje usluge
+  //NAPOMENA: Ako je usluga unutar neke rezervacije, ona se nece moci obrisati
   const removeService = async (id) => {
-    Service.delete(`/service/${id}`, data.service_id).then((result) => {
-      notify_info();
-    });
+    try {
+      await Service.delete(`/service/${id}`, data.service_id).then((result) => {
+        notify_success();
+      });
+    } catch (error) {
+      notify_error();
+    }
   };
 
   //dohvat usluga

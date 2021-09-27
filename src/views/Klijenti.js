@@ -28,9 +28,9 @@ function Klijenti() {
   const [clients, setClients] = React.useState([]);
   const [searchValue, setSearchValue] = useState('');
 
-  const notify_info = () => {
-    toast.info('Pacijent je uspješno obrisan', {
-      position: 'top-right',
+  const notify_success = () => {
+    toast.success('Uspješno', {
+      position: "top-right",
       autoClose: 5000,
       hideProgressBar: false,
       closeOnClick: true,
@@ -38,7 +38,19 @@ function Klijenti() {
       draggable: true,
       progress: undefined,
     });
-  };
+  }
+  
+  const notify_error = () => {
+    toast.error('Greška', {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
+  }
 
   const searchData = (searchValue) => {
     return clients.filter(
@@ -47,11 +59,16 @@ function Klijenti() {
     );
   };
 
-  //Brisanje klijenta
+  //Brisanje klijenata
+  //NAPOMENA: Ako je klijent unutar neke rezervacije, on se nece moci obrisati
   const removeClient = async (id) => {
-    Service.delete(`/clients/${id}`, data.client_id).then((result) => {
-      notify_info();
-    });
+    try {
+      await Service.delete(`/clients/${id}`, data.client_id).then((result) => {
+        notify_success();
+      });
+    } catch (error) {
+      notify_error();
+    }
   };
 
   //Dohvat klijenata
