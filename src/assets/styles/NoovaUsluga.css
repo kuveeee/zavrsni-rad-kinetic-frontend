@@ -26,6 +26,14 @@
     padding-right: 800px;
 }
 
+.novaUsluga_body h6 {
+    font-size: 18px;
+    text-align: left;
+    color: #a9a9b1;
+    margin-left: 100px;
+    margin-bottom: 5px;
+}
+
 .novaUsluga_body .klijent {
     height: 630px;
 }
@@ -39,7 +47,8 @@
 }
 
 .input_opis input {
-    height: 180px;
+    height: 165px;
+    text-align: left;
 }
 
 .input_id input {
@@ -51,7 +60,6 @@
     border-radius: 12px;
     width: 185px;
     height: 50px;
-    display: flex;
     flex-wrap: wrap;
     justify-content: center;
     margin-top: 30px;

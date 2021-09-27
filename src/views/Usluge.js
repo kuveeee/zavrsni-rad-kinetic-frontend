@@ -4,10 +4,25 @@ import '../assets/styles/Usluge.css';
 import { Link } from 'react-router-dom';
 import plus from '../assets/images/usluge/plus.png';
 import { Service, Services } from '../services/index';
+import { toast } from 'react-toastify'; //               Notifications
+import 'react-toastify/dist/ReactToastify.css'; //       Notifications styles
 // import trajanje from '../assets/images/usluge/trajanje.png';
 // import cijena from '../assets/images/usluge/cijena.png';
 
 function Usluge() {
+  //Notifications
+  const notify_info = () => {
+    toast.info('Usluga je uspješno obrisana', {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
+  }
+
   const [data,] = useState({
     service_id: '',
   });
@@ -34,7 +49,7 @@ function Usluge() {
 
   const removeService = async (id) => {
     Service.delete(`/service/${id}`, data.service_id).then((result) => {
-      console.log(result, 'deleted');
+      notify_info();
     });
   };
 
@@ -98,7 +113,7 @@ function Usluge() {
                     </div>
                     <button onClick={() => removeService(service.service_id)}>Delete</button>
                   </div>
-                  
+
                 </div>
               ))
               }

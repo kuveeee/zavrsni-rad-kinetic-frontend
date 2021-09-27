@@ -42,6 +42,13 @@ h2 {
     text-shadow: 0px 3px 6px #00000029;
 }
 
+.novaRezervacija_body h6 {
+    font-size: 18px;
+    text-align: left;
+    color: #a9a9b1;
+    margin-left: 100px;
+}
+
 .klijent {
     width: 400px;
     height: 650px;
@@ -124,7 +131,6 @@ h2 {
 
 .odabir_usluga h2 {
     font-size: 20px;
-    margin-bottom: 18px;
 }
 
 .odabir_usluga select {
@@ -134,7 +140,8 @@ h2 {
     height: 60px;
     border-radius: 10px;
     border: none;
-    margin-bottom: 20px;
+    margin-bottom: 24px;
+    margin-left: 20px;
 }
 
 .odabir_usluga select:hover {
@@ -181,6 +188,7 @@ h2 {
     height: 30px;
     border-radius: 10px;
     padding-left: 20px;
+    margin-left: 20px !important;
 }
 
 .odabir_termina input:hover {

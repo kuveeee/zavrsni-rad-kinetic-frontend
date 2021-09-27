@@ -1,14 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import '../assets/styles/Klijenti.css';
 import plus from '../assets/images/usluge/plus.png';
-// import { toast } from 'react-toastify'; //notifikacije
-import 'react-toastify/dist/ReactToastify.css';
+import { toast } from 'react-toastify'; //notifikacije
+import 'react-toastify/dist/ReactToastify.css'; //Notifications styles
 import { Link } from 'react-router-dom';
 import { Clients, Service } from '../services/index';
 import * as Icons from '@material-ui/icons';
 import '../assets/styles/clientSearch.css';
 
-// toast.configure();
 // const notify_success = () => {
 //   toast.success('🦄 Uspješno', {
 //     position: "top-right",
@@ -20,7 +19,7 @@ import '../assets/styles/clientSearch.css';
 //     progress: undefined,
 //   });
 // }
-
+//Notifikacije
 function Klijenti() {
   const [data] = useState({
     client_id: '',
@@ -28,6 +27,17 @@ function Klijenti() {
   const [clients, setClients] = React.useState([]);
   const [searchValue, setSearchValue] = useState('');
 
+  const notify_info = () => {
+    toast.info('Pacijent je uspješno obrisan', {
+      position: 'top-right',
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
+  };
   const searchData = (searchValue) => {
     return clients.filter(
       (client) =>
@@ -37,7 +47,7 @@ function Klijenti() {
 
   const removeClient = async (id) => {
     Service.delete(`/clients/${id}`, data.client_id).then((result) => {
-      console.log(result, 'deleted');
+      notify_info();
     });
   };
 

@@ -267,6 +267,11 @@
     display: table;
 }
 
+.usluge:hover>.dashboard_tablica {
+    transition: transform 0.7s;
+    transform: scale(1.05);
+}
+
 .dashboard_body li {
     display: table-cell;
     vertical-align: middle;

@@ -18,7 +18,7 @@ const notify_success = () => {
 }
 
 const notify_error = () => {
-    toast.error('🦄', {
+    toast.error('Usluga je uspješno kreirana', {
         position: "top-right",
         autoClose: 5000,
         hideProgressBar: false,
@@ -67,6 +67,8 @@ function NovaUsluga() {
         <div class="novaUsluga_body">
             <div class="flex_row">
                 <h1>Nova usluga</h1>
+                <div class="break"></div>
+                <h6>Potrebno je ispuniti sva polja</h6>
                 <div class="break"></div>
                 <div class="klijent">
                     <form onSubmit={(e) => submit(e)}>
