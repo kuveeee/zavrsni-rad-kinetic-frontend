@@ -13,6 +13,10 @@ let Clients = {
     let response = await Service.get('/clients');
     return response.data;
   },
+  async getClient(client_id) {
+    let response = await Service.get(`/clients/${client_id}`);
+    return response.data;
+  },
   // async removeClient(id) {
   //   let response = await Service.delete(`/clients/:${id}`);
   // },

@@ -47,13 +47,6 @@ function Klijenti() {
     );
   };
 
-  //Uređivanje podataka klijenta
-  const updateClientInfo = async (id) => {
-    Service.put(`/clients/${id}`, data.client_id).then((result) => {
-      notify_info();
-    });
-  };
-
   //Brisanje klijenta
   const removeClient = async (id) => {
     Service.delete(`/clients/${id}`, data.client_id).then((result) => {
@@ -112,21 +105,14 @@ function Klijenti() {
 
           {clients.map((client) => (
             <div className="klijent_box">
-              <Link to={`/clients/${client.client_id}`} style={{ textDecoration: 'none', color: 'black' }}>
-                <li>
-                  <strong>{client.client_first_name + ' ' + client.client_last_name}</strong>
-                </li>
-              </Link>
+              <li>
+                <strong>{client.client_first_name + ' ' + client.client_last_name}</strong>
+              </li>
               <li>{client.client_phone_number}</li>
               <li>{client.client_email}</li>
               <li>{moment(client.client_birth_date).format('L')}</li>
               <li>{client.client_sex}</li>
               <button onClick={() => removeClient(client.client_id)}>Delete</button>
-              <button class="button_update" onClick={() => updateClientInfo(client.client_id)}>Uredi</button>
-              <div id="client_update">
-                <input type="text"></input>
-                <input type="text"></input>
-              </div>
             </div>
           ))}
         </div>

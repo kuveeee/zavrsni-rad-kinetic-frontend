@@ -11,6 +11,7 @@ import Naplacivanje from './Naplacivanje';
 import Profil from './Profil';
 import NoviPacijent from './NooviPacijent';
 import NovaUsluga from './NoovaUsluga';
+import KlijentUpdate from './KlijentUpdate';
 
 const PrivateRoute = () => {
   return (
@@ -28,6 +29,7 @@ const PrivateRoute = () => {
           <Route path="/profil" component={Profil} />
           <Route path="/novi-pacijent" component={NoviPacijent} />
           <Route path="/nova-usluga" component={NovaUsluga} />
+          <Route path="/update-klijent" component={KlijentUpdate} />
         </Switch>
       </Router>
     </>
