@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
-// import Axios from 'axios';
 import '../assets/styles/Klijenti.css';
-import ClientSearch from '../components/clientSearch'; //komponenta za pretragu klijenata
 import plus from '../assets/images/usluge/plus.png';
 // import { toast } from 'react-toastify'; //notifikacije
-import 'react-toastify/dist/ReactToastify.css'; //Notifications styles
+import 'react-toastify/dist/ReactToastify.css';
 import { Link } from 'react-router-dom';
 import { Clients, Service } from '../services/index';
+import * as Icons from '@material-ui/icons';
+import '../assets/styles/clientSearch.css';
 
 // toast.configure();
 // const notify_success = () => {
@@ -22,47 +22,40 @@ import { Clients, Service } from '../services/index';
 // }
 
 function Klijenti() {
-  // const url = `https://kinetic-db.herokuapp.com/clients/${client.client_id}`
-  // const url = `https://kinetic-db.herokuapp.com/clients/`
-  const [data,] = useState({
+  const [data] = useState({
     client_id: '',
   });
-  // const url = `https://kinetic-db.herokuapp.com/clients/${data.client_id}`;
-  // function submit(e) {
-  //   try {
-  //     e.preventDefault();
-  //     Axios.delete(url, {
-  //       id: data.client_id,
-  //     }).then((res) => {
-  //       console.log(res.data);
-  //     });
-  //   } catch (error) {}
-  // }
-  // function handle(e) {
-  //   const newdata = { ...data };
-  //   newdata[e.target.id] = e.target.value;
-  //   setData(newdata);
-  //   console.log(newdata);
-  // }
+  const [clients, setClients] = React.useState([]);
+  const [searchValue, setSearchValue] = useState('');
+
+  const searchData = (searchValue) => {
+    return clients.filter(
+      (client) =>
+        client.client_first_name.includes(searchValue) || client.client_last_name.includes(searchValue)
+    );
+  };
 
   const removeClient = async (id) => {
     Service.delete(`/clients/${id}`, data.client_id).then((result) => {
-      console.log(result, 'deleted');   
+      console.log(result, 'deleted');
     });
   };
 
   //Dohvat klijenata
-  const [clients, setClients] = React.useState([]);
   const getClients = async () => {
     let res = await Clients.getAllClients();
     setClients(res);
-    console.log(clients);
   };
 
   useEffect(() => {
-    getClients();
+    if (searchValue !== '') {
+      let result = searchData(searchValue);
+      setClients(result);
+    } else {
+      getClients();
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [searchValue]);
 
   return (
     <div className="main">
@@ -77,7 +70,16 @@ function Klijenti() {
           </Link>
         </div>
         <div class="flex_row">
-          <ClientSearch />
+          <div className="client_search">
+            <div className="search">
+              <Icons.Search />
+              <input
+                placeholder="Pretraga pacijenata"
+                value={searchValue}
+                onChange={(e) => setSearchValue(e.target.value)}
+              ></input>
+            </div>
+          </div>
         </div>
         <div class="flex_row">
           <div class="klijenti_tablica">

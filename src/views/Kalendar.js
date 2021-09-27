@@ -13,6 +13,7 @@ import {
   AppointmentTooltip,
   ConfirmationDialog,
 } from '@devexpress/dx-react-scheduler-material-ui';
+import { Service } from '../services/index';
 
 const moment = require('moment');
 const currentDate = new Date();
@@ -33,24 +34,23 @@ function Kalendar() {
     let formattedEndDate = moment.unix(endDateTimestamp).format();
 
     return {
+      id: reservation.reservation_id,
       startDate: formattedStartDate,
       endDate: formattedEndDate,
       title: reservation.title,
     };
   });
 
-  // const commitChanges = ({ added, changed, deleted }) => {
-  //   setReservationsData((state) => {
-  //     let { data } = state;
-  //     if (added) {
-  //       const startingAddedId = data.length > 0 ? data[data.length - 1].id + 1 : 0;
-  //       data = [...data, { id: startingAddedId, ...added }];
-  //     }
-  //     if (changed) {
-  //       data = data.map((appointment) =>
-  //         changed[appointment.id] ? { ...appointment, ...changed[appointment.id] } : appointment
-  //       );
-  //     }
+  // const removeReservation = async (id) => {
+  //   Service.delete(`/reservations/${id}`, reservationsData.reservation_id).then((result) => {
+  //     console.log(result, 'deleted');
+  //   });
+  // };
+
+  // const commitChanges = ({ deleted }) => {
+  //   setReservationsData((newArray) => {
+  //     let { data } = newArray;
+  //     console.log('this data', data);
   //     if (deleted !== undefined) {
   //       data = data.filter((appointment) => appointment.id !== deleted);
   //     }
@@ -77,7 +77,19 @@ function Kalendar() {
       <Paper>
         <Scheduler data={newArray}>
           <ViewState currentDate={currentDate} />
-          <EditingState />
+          <EditingState
+            onCommitChanges={function commitChanges({ added, changed, deleted }) {
+              setReservationsData((id) => {
+                let { data } = reservationsData;
+                if (deleted !== undefined) {
+                  Service.delete(`/reservations/${id}`, reservationsData.reservation_id).then((result) => {
+                    console.log(result, 'deleted');
+                  });
+                }
+                return { data };
+              });
+            }}
+          />
           <IntegratedEditing />
           <ConfirmationDialog />
           <WeekView startDayHour={7} endDayHour={16} excludedDays={[0, 6]} />
