@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 import { Clients, Service } from '../services/index';
 import * as Icons from '@material-ui/icons';
 import '../assets/styles/clientSearch.css';
+const moment = require('moment');
 
 // const notify_success = () => {
 //   toast.success('🦄 Uspješno', {
@@ -38,6 +39,7 @@ function Klijenti() {
       progress: undefined,
     });
   };
+
   const searchData = (searchValue) => {
     return clients.filter(
       (client) =>
@@ -102,12 +104,14 @@ function Klijenti() {
 
           {clients.map((client) => (
             <div className="klijent_box">
-              <li>
-                <strong>{client.client_first_name + ' ' + client.client_last_name}</strong>
-              </li>
+              <Link to={`/clients/${client.client_id}`} style={{ textDecoration: 'none', color: 'black' }}>
+                <li>
+                  <strong>{client.client_first_name + ' ' + client.client_last_name}</strong>
+                </li>
+              </Link>
               <li>{client.client_phone_number}</li>
               <li>{client.client_email}</li>
-              <li>{client.client_birth_date}</li>
+              <li>{moment(client.client_birth_date).format('L')}</li>
               <li>{client.client_sex}</li>
               <button onClick={() => removeClient(client.client_id)}>Delete</button>
             </div>
